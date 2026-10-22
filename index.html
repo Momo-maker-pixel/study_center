@@ -4959,12 +4959,13 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
   refreshLineUI();
 })();
 
-// ---- v5: 系列课程 / 精选直播 / 训练营 三分块切换 + URL 深链（#courses / #live / #camp） ----
+// ---- v5: 系列课程 / 精选直播 / 训练营 三分块切换 + URL 深链 ----
+// Cloudflare Pages 线上使用 /courses、/live、/camp；本地预览及旧链接兼容 #courses、#live、#camp
 (function(){
   var cards = Array.prototype.slice.call(document.querySelectorAll('[data-portal-goto]'));
   var views = Array.prototype.slice.call(document.querySelectorAll('[data-portal-view]'));
   var PORTALS = { courses: 1, live: 1, camp: 1 };
-  /* 训练营页内锚点：直接打开这些链接时也先切到训练营，再滚动到对应区块 */
+  /* 训练营页内锚点：直接打开这些链接时也先切到训练营 */
   var CAMP_HASHES = { camps: 1, schedule: 1, tutors: 1, rewards: 1, faq: 1, join: 1 };
   var DEFAULT_PORTAL = 'courses';
 
@@ -4978,36 +4979,59 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
   }
 
   function readHashPortal(){
-    var hash = location.hash || '';
-    var name = hash.replace(/^#\/?/, '');
+    var name = (location.hash || '').replace(/^#\/?/, '');
     if (PORTALS[name]) return name;
     if (CAMP_HASHES[name]) return 'camp';
     return '';
   }
 
+  function readPathPortal(){
+    var m = (location.pathname || '').match(/\/(courses|live|camp)\/?$/);
+    return m ? m[1] : '';
+  }
+
+  function portalPath(name){
+    var path = location.pathname || '/';
+    var m = path.match(/^(.*\/)(?:courses|live|camp)\/?$/);
+    if (m) return m[1] + name;
+    if (/\/index\.html$/.test(path)) return path.replace(/index\.html$/, '') + name;
+    if (/\/$/.test(path)) return path + name;
+    return path.replace(/[^/]*$/, '') + name;
+  }
+
   function setPortal(name, syncUrl){
     if (!PORTALS[name]) name = DEFAULT_PORTAL;
     applyPortal(name);
-    if (syncUrl !== false) {
+    if (syncUrl === false) return;
+
+    if (location.protocol === 'file:') {
+      /* 本地双击打开时仍用 hash，避免 file:// 下 pushState 失败 */
       var nextHash = '#' + name;
       if (location.hash !== nextHash) {
-        /* 保留原有的 ?v=... 等查询参数，只替换 hash */
         var nextUrl = location.href.split('#')[0] + nextHash;
         try { history.pushState(null, '', nextUrl); }
         catch (err) { location.hash = name; }
       }
+      return;
+    }
+
+    var nextPath = portalPath(name);
+    /* 保留 ?v=... 等查询参数，同时清掉旧 hash */
+    if (location.pathname !== nextPath || location.hash) {
+      try { history.pushState(null, '', nextPath + (location.search || '')); }
+      catch (err) { location.href = nextPath + (location.search || ''); }
     }
   }
 
   function syncFromUrl(){
-    var name = readHashPortal();
+    /* 路径优先，兼容旧的 hash 链接 */
+    var name = readPathPortal() || readHashPortal();
     if (name) {
       applyPortal(name);
     } else if (!location.hash || location.hash === '#') {
-      /* 无后缀时回到默认的「系列课程」 */
+      /* 根路径 / index.html 默认显示「系列课程」 */
       applyPortal(DEFAULT_PORTAL);
     }
-    /* 其他 hash（如 SVG symbol 引用）不切换模块 */
   }
 
   cards.forEach(function(c){

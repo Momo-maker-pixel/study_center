@@ -1,0 +1,8 @@
+# Cloudflare：三个模块使用路径后缀，200 代理到根入口（地址栏保持 /courses 等）
+# 代理到 / 而不是 /index.html，避免 Cloudflare 的 HTML 处理把 /index.html 跳转到 /
+/courses / 200
+/courses/ / 200
+/live / 200
+/live/ / 200
+/camp / 200
+/camp/ / 200

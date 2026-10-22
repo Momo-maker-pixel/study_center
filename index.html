@@ -4959,11 +4959,16 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
   refreshLineUI();
 })();
 
-// ---- v5: 系列课程 / 精选直播 双分块切换 ----
+// ---- v5: 系列课程 / 精选直播 / 训练营 三分块切换 + URL 深链（#courses / #live / #camp） ----
 (function(){
   var cards = Array.prototype.slice.call(document.querySelectorAll('[data-portal-goto]'));
   var views = Array.prototype.slice.call(document.querySelectorAll('[data-portal-view]'));
-  function setPortal(name){
+  var PORTALS = { courses: 1, live: 1, camp: 1 };
+  /* 训练营页内锚点：直接打开这些链接时也先切到训练营，再滚动到对应区块 */
+  var CAMP_HASHES = { camps: 1, schedule: 1, tutors: 1, rewards: 1, faq: 1, join: 1 };
+  var DEFAULT_PORTAL = 'courses';
+
+  function applyPortal(name){
     cards.forEach(function(c){ c.classList.toggle('active', c.getAttribute('data-portal-goto') === name); });
     views.forEach(function(v){ v.style.display = (v.getAttribute('data-portal-view') === name) ? '' : 'none'; });
     setTimeout(function(){
@@ -4971,10 +4976,49 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
       window.dispatchEvent(new Event('resize'));
     }, 90);
   }
+
+  function readHashPortal(){
+    var hash = location.hash || '';
+    var name = hash.replace(/^#\/?/, '');
+    if (PORTALS[name]) return name;
+    if (CAMP_HASHES[name]) return 'camp';
+    return '';
+  }
+
+  function setPortal(name, syncUrl){
+    if (!PORTALS[name]) name = DEFAULT_PORTAL;
+    applyPortal(name);
+    if (syncUrl !== false) {
+      var nextHash = '#' + name;
+      if (location.hash !== nextHash) {
+        /* 保留原有的 ?v=... 等查询参数，只替换 hash */
+        var nextUrl = location.href.split('#')[0] + nextHash;
+        try { history.pushState(null, '', nextUrl); }
+        catch (err) { location.hash = name; }
+      }
+    }
+  }
+
+  function syncFromUrl(){
+    var name = readHashPortal();
+    if (name) {
+      applyPortal(name);
+    } else if (!location.hash || location.hash === '#') {
+      /* 无后缀时回到默认的「系列课程」 */
+      applyPortal(DEFAULT_PORTAL);
+    }
+    /* 其他 hash（如 SVG symbol 引用）不切换模块 */
+  }
+
   cards.forEach(function(c){
     c.addEventListener('click', function(){ setPortal(c.getAttribute('data-portal-goto')); });
   });
-  window.__setPortal = setPortal;
+
+  window.addEventListener('hashchange', syncFromUrl);
+  window.addEventListener('popstate', syncFromUrl);
+  syncFromUrl();
+
+  window.__setPortal = function(name){ setPortal(name); };
 })();
 </script>
 <script>

@@ -5159,13 +5159,23 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
     applyPortal(name);
     if (syncUrl === false) return;
 
-    /* v9.2 统一 hash 路由：静态托管（无 SPA fallback）下 /live、/camp 路径刷新会 404，
-       hash 模式刷新/分享均稳定；readPathPortal 仍兼容已存在的 /live 路径深链 */
-    var nextHash = '#' + name;
-    if (location.hash !== nextHash) {
-      var nextUrl = location.href.split('#')[0] + nextHash;
-      try { history.pushState(null, '', nextUrl); }
-      catch (err) { location.hash = name; }
+    /* v10：统一 path 路由（/courses、/live、/camp），依赖根目录 _redirects 把模块路径以 200
+       回落到根入口；file:// 本地预览无法做路径回落，退回 hash 保证可用 */
+    if (location.protocol === 'file:') {
+      var nextHash = '#' + name;
+      if (location.hash !== nextHash) {
+        var nextUrl = location.href.split('#')[0] + nextHash;
+        try { history.pushState(null, '', nextUrl); }
+        catch (err) { location.hash = name; }
+      }
+      return;
+    }
+
+    var nextPath = portalPath(name);
+    /* 保留 ?v=... 等查询参数，同时清掉旧 hash */
+    if (location.pathname !== nextPath || location.hash) {
+      try { history.pushState(null, '', nextPath + (location.search || '')); }
+      catch (err) { location.href = nextPath + (location.search || ''); }
     }
   }
 

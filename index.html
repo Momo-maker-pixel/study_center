@@ -2693,15 +2693,28 @@ video {
 .sc-desc{margin:7px auto 0;max-width:100%;font-size:12.5px;line-height:1.6;color:hsl(220,9%,56%);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .sc-meta{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px;margin-top:10px}
 .sc-count{font-size:11px;font-weight:700;color:hsl(220,10%,45%);background:hsl(220,16%,95%);border-radius:99px;padding:4px 10px}
+.sc-time{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:600;color:hsl(220,10%,45%);background:hsl(220,16%,95%);border-radius:99px;padding:4px 10px}
+.sc-time::before{content:"";width:9px;height:9px;flex:none;border-radius:50%;border:1.5px solid currentColor;opacity:.65}
 .sc-course-list{display:flex;flex-direction:column;gap:2px;margin-top:10px;padding:8px 10px 12px;border-top:1px dashed hsl(220,13%,90%);flex:1}
-.sc-course{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:10px;text-decoration:none;transition:background .15s ease}
+.sc-course{display:flex;align-items:center;gap:6px;padding:8px 8px;border-radius:10px;text-decoration:none;transition:background .15s ease}
 a.sc-course:hover{background:hsl(220,16%,96%)}
 .sc-course.is-pending{cursor:default}
 .sc-course.is-pending:hover{background:transparent}
 .sc-course-main{flex:1;min-width:0;font-size:13.5px;font-weight:600;line-height:1.45;color:hsl(220,14%,20%);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .sc-course.is-pending .sc-course-main{color:hsl(220,8%,64%)}
-.sc-course-tag{flex:none;font-size:11px;font-weight:700;color:hsl(220,10%,45%);background:hsl(220,16%,95%);border-radius:99px;padding:3px 9px;white-space:nowrap;max-width:9em;overflow:hidden;text-overflow:ellipsis}
+.sc-course-tag{flex:none;font-size:10px;font-weight:600;color:hsl(220,10%,45%);background:hsl(220,16%,95%);border-radius:99px;padding:2px 6px;white-space:nowrap;max-width:9em;overflow:hidden;text-overflow:ellipsis}
 .sc-course-tag.is-pending{color:hsl(220,8%,68%);background:hsl(220,14%,96%)}
+/* === v10: 课程条目「实操演示 / 图文详情」图标按钮（文案仅悬浮展示） === */
+.sc-acts{display:inline-flex;align-items:center;gap:2px;flex:none}
+.sc-act{position:relative;display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:6px;background:hsl(220,16%,96%);color:hsl(220,10%,48%);cursor:pointer;outline:none;transition:background .15s ease,color .15s ease,transform .15s ease}
+.sc-act svg{width:11px;height:11px;display:block}
+.sc-act:hover,.sc-act:focus-visible{background:hsl(220,16%,92%);color:hsl(220,14%,26%);transform:translateY(-1px)}
+.sc-act--video:hover,.sc-act--video:focus-visible{background:hsla(158,64%,42%,.14);color:hsl(158,64%,32%)}
+.sc-act--doc:hover,.sc-act--doc:focus-visible{background:hsla(220,100%,59%,.13);color:hsl(220,100%,48%)}
+.sc-act.is-hint{background:hsl(220,16%,92%);color:hsl(220,14%,26%)}
+.sc-act::after{content:attr(data-tip);position:absolute;right:0;bottom:calc(100% + 6px);padding:4px 8px;border-radius:7px;background:rgba(15,23,42,.92);color:#fff;font-size:11px;font-weight:600;line-height:1.25;white-space:nowrap;opacity:0;visibility:hidden;transform:translateY(3px);transition:opacity .15s ease,transform .15s ease;pointer-events:none;z-index:6}
+.sc-act:hover::after,.sc-act:focus-visible::after,.sc-act.is-hint::after{opacity:1;visibility:visible;transform:none}
+@media (max-width:767px){.sc-act{width:24px;height:24px}.sc-act svg{width:12px;height:12px}}
 .stage-card .acc-prog{display:inline-flex;align-items:center;gap:7px}
 </style>
 <style>
@@ -3619,11 +3632,11 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
         <p class="sc-desc" title="认识 AIPro 是什么 · 建立产品全景认知">认识 AIPro 是什么 · 建立产品全景认知</p>
         <div class="sc-meta">
           <span class="sc-count">3 个资源</span>
-          <span class="acc-prog"><span class="acc-prog-label">已学 <b>0</b>/3</span><span class="acc-prog-bar"><i style="width:0%"></i></span></span>
+          <span class="sc-time">预计 5 分钟</span>
         </div>
       </div>
       <div class="sc-course-list">
-        <a class="sc-course" data-learnkey="https://help.aliyun.com/zh/quick-bi/getting-started/quick-bi-aipro-getting-started-guide?spm=a2c4g.11186623.help-menu-30343.d_1_1.57bb70e1aXshze&amp;scm=20140722.H_3045291._.OR_help-T_cn~zh-V_1" data-learn="https://help.aliyun.com/zh/quick-bi/getting-started/quick-bi-aipro-getting-started-guide?spm=a2c4g.11186623.help-menu-30343.d_1_1.57bb70e1aXshze&amp;scm=20140722.H_3045291._.OR_help-T_cn~zh-V_1" href="https://help.aliyun.com/zh/quick-bi/getting-started/quick-bi-aipro-getting-started-guide?spm=a2c4g.11186623.help-menu-30343.d_1_1.57bb70e1aXshze&amp;scm=20140722.H_3045291._.OR_help-T_cn~zh-V_1" target="_blank" rel="noopener"><span class="sc-course-main">AIPro是什么</span><span class="sc-course-tag">AIPro 概览</span></a>
+        <a class="sc-course" data-learnkey="https://help.aliyun.com/zh/quick-bi/getting-started/quick-bi-aipro-getting-started-guide" data-learn="https://help.aliyun.com/zh/quick-bi/getting-started/quick-bi-aipro-getting-started-guide" href="https://help.aliyun.com/zh/quick-bi/getting-started/quick-bi-aipro-getting-started-guide" target="_blank" rel="noopener"><span class="sc-course-main">AIPro是什么</span><span class="sc-course-tag">AIPro 概览</span></a>
         <a class="sc-course" data-learnkey="https://help.aliyun.com/zh/quick-bi/getting-started/quick-bi-aipro-getting-started-guide" data-learn="https://help.aliyun.com/zh/quick-bi/getting-started/quick-bi-aipro-getting-started-guide" href="https://help.aliyun.com/zh/quick-bi/getting-started/quick-bi-aipro-getting-started-guide" target="_blank" rel="noopener"><span class="sc-course-main">3 分钟，为AIPro接入数据</span><span class="sc-course-tag">数据接入</span></a>
         <a class="sc-course" data-learnkey="https://help.aliyun.com/zh/quick-bi/getting-started/quick-bi-aipro-getting-started-guide" data-learn="https://help.aliyun.com/zh/quick-bi/getting-started/quick-bi-aipro-getting-started-guide" href="https://help.aliyun.com/zh/quick-bi/getting-started/quick-bi-aipro-getting-started-guide" target="_blank" rel="noopener"><span class="sc-course-main">不会SQL，自然语言实现问数分析</span><span class="sc-course-tag">AI 问数</span></a>
       </div>
@@ -3635,13 +3648,13 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
         <p class="sc-desc" title="日常分析任务，交给 AI">日常分析任务，交给 AI</p>
         <div class="sc-meta">
           <span class="sc-count">3 个资源</span>
-          <span class="acc-prog"><span class="acc-prog-label">已学 <b>0</b>/3</span><span class="acc-prog-bar"><i style="width:0%"></i></span></span>
+          <span class="sc-time">预计 15 分钟</span>
         </div>
       </div>
       <div class="sc-course-list">
-        <a class="sc-course" data-learnkey="https://help.aliyun.com/zh/quick-bi/user-guide/visualized-report" data-learn="https://help.aliyun.com/zh/quick-bi/user-guide/visualized-report" href="https://help.aliyun.com/zh/quick-bi/user-guide/visualized-report" target="_blank" rel="noopener"><span class="sc-course-main">会前 5 分钟，AI 现搭一块会更新的看板</span><span class="sc-course-tag">AI Dashboard</span></a>
+        <a class="sc-course" data-learnkey="https://help.aliyun.com/zh/quick-bi/user-guide/visualized-report" data-learn="https://help.aliyun.com/zh/quick-bi/user-guide/visualized-report" href="https://help.aliyun.com/zh/quick-bi/user-guide/visualized-report" target="_blank" rel="noopener"><span class="sc-course-main">会前 5 分钟，AI 搭出会更新的看板</span><span class="sc-course-tag">AI Dashboard</span></a>
         <a class="sc-course" data-learnkey="https://help.aliyun.com/zh/quick-bi/user-guide/document-report" data-learn="https://help.aliyun.com/zh/quick-bi/user-guide/document-report" href="https://help.aliyun.com/zh/quick-bi/user-guide/document-report" target="_blank" rel="noopener"><span class="sc-course-main">汇报不用熬夜：AI 把分析写成文档报告</span><span class="sc-course-tag">文档报告</span></a>
-        <a class="sc-course" data-learnkey="https://help.aliyun.com/zh/quick-bi/user-guide/html-report" data-learn="https://help.aliyun.com/zh/quick-bi/user-guide/html-report" href="https://help.aliyun.com/zh/quick-bi/user-guide/html-report" target="_blank" rel="noopener"><span class="sc-course-main">分析一键变网页：AI 生成 HTML 报告</span><span class="sc-course-tag">HTML 报告</span></a>
+        <a class="sc-course" data-learnkey="https://help.aliyun.com/zh/quick-bi/user-guide/html-report" data-learn="https://help.aliyun.com/zh/quick-bi/user-guide/html-report" href="https://help.aliyun.com/zh/quick-bi/user-guide/html-report" target="_blank" rel="noopener"><span class="sc-course-main">分析一键变网页：生成 HTML 报告</span><span class="sc-course-tag">HTML 报告</span></a>
       </div>
     </div>
     <div class="stage-card" id="acc-aa3" data-line="aipro" data-stage="3" data-total="0" style="--sg:hsl(262,83%,58%)">
@@ -3651,7 +3664,7 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
         <p class="sc-desc" title="专题视频，成为团队里的 AI 高手">专题视频，成为团队里的 AI 高手</p>
         <div class="sc-meta">
           <span class="sc-count">3 个资源</span>
-          <span class="acc-prog"><span class="acc-prog-label">已学 <b>0</b>/2</span><span class="acc-prog-bar"><i style="width:0%"></i></span></span>
+          <span class="sc-time">预计 10 分钟</span>
         </div>
       </div>
       <div class="sc-course-list">
@@ -3669,7 +3682,7 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
         <p class="sc-desc" title="让企业的用户先用起来">让企业的用户先用起来</p>
         <div class="sc-meta">
           <span class="sc-count">2 个资源</span>
-          <span class="acc-prog"><span class="acc-prog-label">已学 <b>0</b>/2</span><span class="acc-prog-bar"><i style="width:0%"></i></span></span>
+          <span class="sc-time">预计 5 分钟</span>
         </div>
       </div>
       <div class="sc-course-list">
@@ -3684,7 +3697,7 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
         <p class="sc-desc" title="企业级配置 · 资产、知识、技能与 MCP">企业级配置 · 资产、知识、技能与 MCP</p>
         <div class="sc-meta">
           <span class="sc-count">4 个资源</span>
-          <span class="acc-prog"><span class="acc-prog-label">已学 <b>0</b>/4</span><span class="acc-prog-bar"><i style="width:0%"></i></span></span>
+          <span class="sc-time">预计 15 分钟</span>
         </div>
       </div>
       <div class="sc-course-list">
@@ -3701,13 +3714,13 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
         <p class="sc-desc" title="频道管理 · 用量配额 · 运营管理">频道管理 · 用量配额 · 运营管理</p>
         <div class="sc-meta">
           <span class="sc-count">3 个资源</span>
-          <span class="acc-prog"><span class="acc-prog-label">已学 <b>0</b>/3</span><span class="acc-prog-bar"><i style="width:0%"></i></span></span>
+          <span class="sc-time">预计 10 分钟</span>
         </div>
       </div>
       <div class="sc-course-list">
         <a class="sc-course" data-learnkey="https://help.aliyun.com/zh/quick-bi/user-guide/channel-management/?spm=a2c4g.11186623.help-menu-30343.d_2_0_4_7.5985385af09H8q" data-learn="https://help.aliyun.com/zh/quick-bi/user-guide/channel-management/?spm=a2c4g.11186623.help-menu-30343.d_2_0_4_7.5985385af09H8q" href="https://help.aliyun.com/zh/quick-bi/user-guide/channel-management/?spm=a2c4g.11186623.help-menu-30343.d_2_0_4_7.5985385af09H8q" target="_blank" rel="noopener"><span class="sc-course-main">让员工在企业 IM 中直接与 AIPro 对话</span><span class="sc-course-tag">频道管理</span></a>
         <a class="sc-course" data-learnkey="https://help.aliyun.com/zh/quick-bi/user-guide/credit-management" data-learn="https://help.aliyun.com/zh/quick-bi/user-guide/credit-management" href="https://help.aliyun.com/zh/quick-bi/user-guide/credit-management" target="_blank" rel="noopener"><span class="sc-course-main">AI 用量看得见、花得省</span><span class="sc-course-tag">Credit 与配额</span></a>
-        <a class="sc-course" data-learnkey="https://help.aliyun.com/zh/quick-bi/user-guide/operations-management" data-learn="https://help.aliyun.com/zh/quick-bi/user-guide/operations-management" href="https://help.aliyun.com/zh/quick-bi/user-guide/operations-management" target="_blank" rel="noopener"><span class="sc-course-main">运营管理：谁在用、答得准不准一目了然</span><span class="sc-course-tag">运营管理</span></a>
+        <a class="sc-course" data-learnkey="https://help.aliyun.com/zh/quick-bi/user-guide/operations-management" data-learn="https://help.aliyun.com/zh/quick-bi/user-guide/operations-management" href="https://help.aliyun.com/zh/quick-bi/user-guide/operations-management" target="_blank" rel="noopener"><span class="sc-course-main">用户使用和回答情况一目了然</span><span class="sc-course-tag">运营管理</span></a>
       </div>
     </div>
   </div></div>
@@ -3716,10 +3729,10 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
       <div class="sc-art"><img src="https://robject.oss-cn-shanghai.aliyuncs.com/robject-publish/media/10001/596/1c311b7d-0b7f-4ed2-9f83-6c319a30f16e/t2i_20261021163515_0.png?OSSAccessKeyId=LTAI5t7D1JqXhJXGaf6JSHEx&amp;Expires=4946172216&amp;Signature=pujXrB41d9WaGNP3s5Mhvj5YfEw%3D" alt="基础入门" loading="lazy"><span class="sc-num">1</span></div>
       <div class="sc-body">
         <div class="sc-name">基础入门</div>
-        <p class="sc-desc" title="约 30 分钟 · 认识产品、看懂功能链路">约 30 分钟 · 认识产品、看懂功能链路</p>
+        <p class="sc-desc" title="认识产品、看懂功能链路">认识产品、看懂功能链路</p>
         <div class="sc-meta">
           <span class="sc-count">3 个资源</span>
-          <span class="acc-prog"><span class="acc-prog-label">已学 <b>0</b>/3</span><span class="acc-prog-bar"><i style="width:0%"></i></span></span>
+          <span class="sc-time">预计 10 分钟</span>
         </div>
       </div>
       <div class="sc-course-list">
@@ -3735,7 +3748,7 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
         <p class="sc-desc" title="从数据到看板，把全链路走通">从数据到看板，把全链路走通</p>
         <div class="sc-meta">
           <span class="sc-count">7 个资源</span>
-          <span class="acc-prog"><span class="acc-prog-label">已学 <b>0</b>/7</span><span class="acc-prog-bar"><i style="width:0%"></i></span></span>
+          <span class="sc-time">预计 2 小时</span>
         </div>
       </div>
       <div class="sc-course-list">
@@ -3755,7 +3768,7 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
         <p class="sc-desc" title="专题视频，解锁高阶能力">专题视频，解锁高阶能力</p>
         <div class="sc-meta">
           <span class="sc-count">3 个资源</span>
-          <span class="acc-prog"><span class="acc-prog-label">已学 <b>0</b>/3</span><span class="acc-prog-bar"><i style="width:0%"></i></span></span>
+          <span class="sc-time">预计 1 小时</span>
         </div>
       </div>
       <div class="sc-course-list">
@@ -3773,7 +3786,7 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
         <p class="sc-desc" title="数据源接入 · 数据准备 · 数据集建模">数据源接入 · 数据准备 · 数据集建模</p>
         <div class="sc-meta">
           <span class="sc-count">3 个资源</span>
-          <span class="acc-prog"><span class="acc-prog-label">已学 <b>0</b>/3</span><span class="acc-prog-bar"><i style="width:0%"></i></span></span>
+          <span class="sc-time">预计 40 分钟</span>
         </div>
       </div>
       <div class="sc-course-list">
@@ -3789,7 +3802,7 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
         <p class="sc-desc" title="安全嵌入 · 监控告警">安全嵌入 · 监控告警</p>
         <div class="sc-meta">
           <span class="sc-count">2 个资源</span>
-          <span class="acc-prog"><span class="acc-prog-label">已学 <b>0</b>/2</span><span class="acc-prog-bar"><i style="width:0%"></i></span></span>
+          <span class="sc-time">预计 60 分钟</span>
         </div>
       </div>
       <div class="sc-course-list">
@@ -3804,7 +3817,7 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
         <p class="sc-desc" title="专业版能力 · 移动微应用">专业版能力 · 移动微应用</p>
         <div class="sc-meta">
           <span class="sc-count">2 个资源</span>
-          <span class="acc-prog"><span class="acc-prog-label">已学 <b>0</b>/2</span><span class="acc-prog-bar"><i style="width:0%"></i></span></span>
+          <span class="sc-time">预计 90 分钟</span>
         </div>
       </div>
       <div class="sc-course-list">
@@ -5029,6 +5042,7 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
       updateProgress();
     }
   }
+  window.__markSeen = markSeen;
   function updateProgress(){
     var seen = getSeen();
     document.querySelectorAll('[data-learnkey]').forEach(function(el){
@@ -5215,6 +5229,7 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
     modal.style.display = 'flex';
     try { var p = player.play(); if (p && p.catch) p.catch(function(){}); } catch(e){}
   }
+  window.__openVideo = open;
   function close(){
     try { player.pause(); } catch(e){}
     player.removeAttribute('src'); player.load();
@@ -5234,6 +5249,105 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
   modal.addEventListener('click', function(e){ if (e.target === modal) close(); });
   closeBtn.addEventListener('click', close);
   document.addEventListener('keydown', function(e){ if (e.key === 'Escape') close(); });
+})();
+</script>
+<script>
+/* AIPro 课程条目：标题后追加「实操演示（播放）/ 图文详情（文档）」两个图标按钮
+ * 1) 按钮只显示图标，文案在悬浮/聚焦时以气泡提示，不占行宽
+ * 2) 点击标题区域（非按钮）默认播放视频；视频地址未配置时保持原有文档跳转
+ * 3) 视频地址后续按「课程标题」补进 VIDEO_SRC，值为 mp4 直链 */
+(function(){
+  /* 视频地址：键 = 课程标题（.sc-course-main 文本），值 = mp4 直链 */
+  var VIDEO_SRC = {
+    /* —— 业务用户篇 —— */
+    'AIPro是什么': 'https://cloud.video.taobao.com/vod/NKZPqFLNbWNsAEfyPWb99Zma6Y8nOiqLDY0UDO_n9CE.mp4',
+    '3 分钟，为AIPro接入数据': 'https://cloud.video.taobao.com/vod/U5iA9ohXtAO-2k9ReidlloiNXmDblU5EfpOe-UQkK9M.mp4',
+    '不会SQL，自然语言实现问数分析': 'https://cloud.video.taobao.com/vod/ivNxTOkWacwTyktlzIFrp7hfQ1rkVPOxapE_ub-4ojw.mp4',
+    '会前 5 分钟，AI 搭出会更新的看板': 'https://cloud.video.taobao.com/vod/D1PYWFEW390TyJu3bMreTEylSee2CMo3oGQrLnCLK6c.mp4',
+    '汇报不用熬夜：AI 把分析写成文档报告': 'https://cloud.video.taobao.com/vod/LBRPZd-rTRi7BwyVY90c-15XYRA6jQH-R9-0kvdif_c.mp4',
+    '分析一键变网页：生成 HTML 报告': 'https://cloud.video.taobao.com/vod/BoQH0jwhSlI64qmiwLT7DCAJXHMdrNUt_awsTVhfq4A.mp4',
+    '将分析过程变成可复用的skill': 'https://cloud.video.taobao.com/vod/lbFemq5xm392AHmR9L-XMIlASkMXSlR_HkVBqwiAxrA.mp4',
+    '每天 9 点自动生成日报并推送': 'https://cloud.video.taobao.com/vod/jRQeaE3FTgmF69ihBebdgkDkgyfUMjaLYLrzibEJG34.mp4',
+    /* —— 管理员篇 —— */
+    '给公司成员开通产品使用权限': 'https://cloud.video.taobao.com/vod/rNQ5G5okwTO1-70_LWGYMmZnGEzGMB8U67mseTcCkBA.mp4',
+    '把企业数据资产接进 AI': 'https://cloud.video.taobao.com/vod/VsaTtwRRVVyt3blP343ZILhHLh7Ac6LfQlM2dpuO7qM.mp4',
+    '员工上手就有数可用': 'https://cloud.video.taobao.com/vod/nHAjCyvF20X9Hxo5OJKvyEI7qNZNkU5pCeWQuP7mgCY.mp4',
+    '把企业口径讲给 AI 听': 'https://cloud.video.taobao.com/vod/OZSdN03X-BBLVF3oKVhglVROEF1Ki3TzrhhFUTIjdXo.mp4',
+    '把标准分析思路沉淀下来': 'https://cloud.video.taobao.com/vod/PoPRZfjXp0ARkr8VSgYXHBNB_gOY9HUvkERqgvlM4AE.mp4',
+    '让 AI 用上外部工具和数据': 'https://cloud.video.taobao.com/vod/DLAnC_SZAw2DQpCclJegXuAM96Zo83-HeBbgGaLMhJY.mp4',
+    '让员工在企业 IM 中直接与 AIPro 对话': 'https://cloud.video.taobao.com/vod/5si99nCwo7jIJZ4yMXXZ2taQ4gewIkSm4-dqyP5-N30.mp4',
+    '用户使用和回答情况一目了然': 'https://cloud.video.taobao.com/vod/hPlNls5IKXHMiH64yMV_VsYmoSa2kcVyfl1ckb5IYXk.mp4',
+    'AI 用量看得见、花得省': 'https://cloud.video.taobao.com/vod/9KVZI8FTi4x8PAbe48EWlo-ZILnv0yNlaijTlZqkC8w.mp4'
+  };
+  /* 标题里空格写法不完全一致时也能命中：去掉空白后再匹配 */
+  function normTitle(s){ return String(s || '').replace(/\s+/g, ''); }
+  var VIDEO_SRC_NORM = {};
+  Object.keys(VIDEO_SRC).forEach(function(k){ VIDEO_SRC_NORM[normTitle(k)] = VIDEO_SRC[k]; });
+  var ICON_PLAY = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg>';
+  var ICON_DOC = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v5h5"></path><path d="M8 13h8"></path><path d="M8 17h5"></path></svg>';
+
+  function playVideo(url, title, key){
+    if (window.__openVideo) window.__openVideo(url, title, '');
+    else window.open(url, '_blank', 'noopener');
+    if (window.__markSeen && key) window.__markSeen(key);
+  }
+  /* 视频未配置时用气泡提示代替跳转，避免点到无反应 */
+  function flash(el, text){
+    var origin = el.getAttribute('data-tip') || '';
+    el.setAttribute('data-tip', text);
+    el.classList.add('is-hint');
+    window.setTimeout(function(){
+      el.classList.remove('is-hint');
+      el.setAttribute('data-tip', origin);
+    }, 1600);
+  }
+  function makeAct(mod, tip, icon, onFire){
+    var el = document.createElement('span');
+    el.className = 'sc-act ' + mod;
+    el.setAttribute('role', 'button');
+    el.setAttribute('tabindex', '0');
+    el.setAttribute('aria-label', tip);
+    el.setAttribute('data-tip', tip);
+    el.innerHTML = icon;
+    el.addEventListener('click', function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      onFire(el);
+    });
+    el.addEventListener('keydown', function(e){
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); e.stopPropagation(); onFire(el); }
+    });
+    return el;
+  }
+
+  document.querySelectorAll('.stage-card[data-line="aipro"] a.sc-course:not(.is-pending)').forEach(function(a){
+    if (a.querySelector('.sc-acts')) return;
+    var titleEl = a.querySelector('.sc-course-main');
+    var title = titleEl ? titleEl.textContent.trim() : '';
+    var key = a.getAttribute('data-learnkey') || '';
+    var docUrl = a.getAttribute('data-learn') || a.getAttribute('href') || '';
+    var videoUrl = a.getAttribute('data-video') || VIDEO_SRC[title] || VIDEO_SRC_NORM[normTitle(title)] || '';
+
+    var acts = document.createElement('span');
+    acts.className = 'sc-acts';
+    acts.appendChild(makeAct('sc-act--video', '实操演示', ICON_PLAY, function(el){
+      if (!videoUrl) { flash(el, '视频待补充'); return; }
+      playVideo(videoUrl, title, key);
+    }));
+    acts.appendChild(makeAct('sc-act--doc', '图文详情', ICON_DOC, function(){
+      if (docUrl) window.open(docUrl, '_blank', 'noopener');
+      if (window.__markSeen && key) window.__markSeen(key);
+    }));
+    a.appendChild(acts);
+
+    /* 标题区域点击：有视频则站内播放，未配置则保持原有链接行为 */
+    a.addEventListener('click', function(e){
+      if (!videoUrl) return;
+      if (e.metaKey || e.ctrlKey || e.shiftKey || (e.button !== undefined && e.button !== 0)) return;
+      e.preventDefault();
+      playVideo(videoUrl, title, key);
+    });
+  });
 })();
 </script><script>
 (function(){

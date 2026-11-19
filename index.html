@@ -1,4 +1,13 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>QUICK BI × AIPRO 学习广场</title><meta name="description" content="Quick BI × AIPro 系列课程 · 精选直播 · 训练营"><style>*, ::before, ::after {
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- 社交分享卡片（微信/钉钉/企微等抓取 og:* 作为链接预览图与文案；图沿用原落地页 1024×1024 PNG，跨平台稳定） -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="QUICK BI × AIPRO 训练营">
+<meta property="og:title" content="QUICK BI × AIPRO 训练营 | 新手营 · AIPro 营 · 大师营">
+<meta property="og:description" content="Quick BI × AIPro 训练营 · 三营滚动开班 · 全部免费参与">
+<meta property="og:image" content="https://img.alicdn.com/imgextra/i3/O1CN01phdBhavO2zG24uCu_!!6000000005944-2-tps-1024-1024.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="1024">
+<meta name="twitter:card" content="summary_large_image"><title>QUICK BI × AIPRO 训练营</title><meta name="description" content="Quick BI × AIPro 训练营 · 三营滚动开班 · 全部免费参与"><style>*, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
@@ -2712,6 +2721,9 @@ a.sc-course:hover{background:hsl(220,16%,96%)}
 .sc-act--video:hover,.sc-act--video:focus-visible{background:hsla(158,64%,42%,.14);color:hsl(158,64%,32%)}
 .sc-act--doc:hover,.sc-act--doc:focus-visible{background:hsla(220,100%,59%,.13);color:hsl(220,100%,48%)}
 .sc-act.is-hint{background:hsl(220,16%,92%);color:hsl(220,14%,26%)}
+/* 该条目缺这类内容（如只有视频没有图文）：按钮置灰，点击给「待补充」提示 */
+.sc-act.is-empty{opacity:.4}
+.sc-act.is-empty:hover,.sc-act.is-empty:focus-visible,.sc-act.is-empty.is-hint{opacity:.72;background:hsl(220,16%,94%);color:hsl(220,10%,46%);transform:none}
 .sc-act::after{content:attr(data-tip);position:absolute;right:0;bottom:calc(100% + 6px);padding:4px 8px;border-radius:7px;background:rgba(15,23,42,.92);color:#fff;font-size:11px;font-weight:600;line-height:1.25;white-space:nowrap;opacity:0;visibility:hidden;transform:translateY(3px);transition:opacity .15s ease,transform .15s ease;pointer-events:none;z-index:6}
 .sc-act:hover::after,.sc-act:focus-visible::after,.sc-act.is-hint::after{opacity:1;visibility:visible;transform:none}
 @media (max-width:767px){.sc-act{width:24px;height:24px}.sc-act svg{width:12px;height:12px}}
@@ -2776,68 +2788,6 @@ section .bg-primary:hover{
   50%{box-shadow:0 4px 22px hsla(220,100%,59%,.45)}
 }
 </style>
-
-<style>
-/* hero 主卡大圆角 */
-section:first-of-type .rounded-lg.border.bg-card{border-radius:18px}
-
-/* 过滤/关卡按钮：胶囊 + 选中渐变 */
-[data-lv-btn],[data-lvq-btn]{
-  border-radius:999px!important;
-  height:32px!important;
-  padding:0 15px!important;
-  font-size:13px!important;
-  letter-spacing:.02em
-}
-[data-lv-btn].bg-primary,[data-lvq-btn].bg-primary{
-  background:linear-gradient(135deg,hsl(220,100%,59%),hsl(220,85%,50%))!important;
-  box-shadow:0 3px 10px -2px hsla(220,100%,59%,.45)
-}
-[data-lv-btn].bg-primary span,[data-lvq-btn].bg-primary span{
-  background:#fff!important
-}
-
-/* 卡片按钮：深色主行动按钮 + 次行动文字链接 */
-.lv-actions{display:flex;align-items:center;gap:12px;margin-top:3px}
-.lv-act-main{display:flex;align-items:center;justify-content:center;gap:8px;flex:1;min-width:0;height:42px;border:none;border-radius:10px;background:hsl(222,16%,20%);color:#fff;font:inherit;font-size:14px;font-weight:700;letter-spacing:.02em;cursor:pointer;text-decoration:none!important;transition:transform .18s ease,background .18s ease}
-a.lv-act-main:hover,button.lv-act-main:hover{transform:translateY(-1px);background:hsl(222,16%,28%)}
-a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
-.lv-act-main .lv-arrow{width:20px;height:20px;border-radius:999px;border:1.5px solid rgba(255,255,255,.45);display:inline-flex;align-items:center;justify-content:center;flex:none}
-.lv-act-main .lv-arrow svg{width:11px;height:11px;display:block}
-.lv-act-sub{display:flex;align-items:center;justify-content:center;gap:4px;flex:none;height:34px;padding:0 10px;color:hsl(220,8%,52%);font-size:13px;white-space:nowrap;text-decoration:none!important;border-radius:8px;transition:color .18s ease,background .18s ease}
-.lv-act-sub:hover{color:hsl(220,12%,26%);background:hsl(220,20%,94%)}
-.lv-act-sub svg{width:14px;height:14px;transition:transform .18s ease}
-.lv-act-sub:hover svg{transform:translateX(2px)}
-.lv-act-empty{display:flex;align-items:center;justify-content:center;gap:8px;flex:1;min-width:0;height:42px;border-radius:10px;border:1.5px dashed hsl(220,10%,80%);background:hsl(220,24%,96%);color:hsl(220,8%,58%);font-size:13px;font-weight:600}
-/* 视频卡左上角模块名: 深色胶囊底, 浅色/深色图上都可读 */
-.pic-tag{display:inline-flex;align-items:center;font-size:10px;font-weight:600;letter-spacing:.03em;line-height:1;padding:3px 7px;border-radius:7px;background:rgba(15,23,42,.68);color:#fff;border:1px solid hsla(0,0%,100%,.28);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);text-shadow:0 1px 2px rgba(0,0,0,.35);pointer-events:none}
-/* 行业实践底部延伸链接 */
-.more-links{display:flex;gap:12px;margin-top:16px}
-.more-link{flex:1;min-width:0;display:flex;align-items:center;gap:12px;padding:14px 18px;border-radius:14px;background:linear-gradient(180deg,hsl(250,32%,97.5%),hsl(0,0%,100%));border:1px solid hsl(220,13%,91%);text-decoration:none!important;box-shadow:0 10px 26px -18px rgba(15,23,42,.22);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
-.more-link:hover{transform:translateY(-2px);border-color:hsl(220,13%,82%);box-shadow:0 14px 30px -16px rgba(15,23,42,.28)}
-.ml-ico{width:36px;height:36px;border-radius:11px;flex:none;display:inline-flex;align-items:center;justify-content:center;background:color-mix(in srgb,var(--mc) 14%,#fff);color:var(--mc)}
-.ml-ico svg{width:19px;height:19px;display:block}
-.ml-txt{display:flex;flex-direction:column;min-width:0;flex:1}
-.ml-txt b{font-size:14px;font-weight:800;color:hsl(220,12%,26%);letter-spacing:.01em}
-.ml-txt span{font-size:11.5px;color:hsl(220,8%,52%);margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.ml-arrow{width:18px;height:18px;flex:none;color:hsl(220,8%,68%);transition:transform .2s ease,color .2s ease}
-.more-link:hover .ml-arrow{transform:translateX(3px);color:var(--mc)}
-@media (max-width:640px){.more-links{flex-direction:column}}
-[data-lv-card] a.bg-primary,.grid>div a.bg-primary{
-  background:linear-gradient(135deg,hsl(220,100%,59%),hsl(220,85%,50%))!important;
-  box-shadow:0 2px 8px -2px hsla(220,100%,59%,.5)
-}
-
-/* 封面质感 */
-[data-lv-card] img,#qbi .grid>.rounded-lg.border.bg-card img{
-  filter:saturate(1.08) contrast(1.04) brightness(.97)
-}
-
-/* 区块间距节奏 */
-#aipro{margin-top:44px!important}
-#qbi{margin-top:52px!important}
-</style>
-
 <style>
 /* === v4: 两级选择 / 单列产品线 / 手风琴 / 横滑 / 吸顶导航 / 进度 === */
 @media (min-width:640px){.sm\:col-span-2{grid-column:span 2/span 2}}
@@ -3597,236 +3547,8 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
   background-image: radial-gradient(1100px 640px at 88% -180px, rgba(99, 102, 241, .13), transparent 62%), radial-gradient(900px 620px at -180px 32%, rgba(47, 128, 237, .11), transparent 64%), radial-gradient(880px 760px at 108% 80%, rgba(139, 92, 246, .08), transparent 60%), radial-gradient(720px 520px at 30% 116%, rgba(76, 151, 245, .09), transparent 62%);
 }
 
-</style></head><body><div id="root"><div class="min-h-screen bg-background"><section class="v5-hero" aria-label="Quick BI × AIPro 学习广场">
-  <div class="v5-hero-in">
-    <div class="v5-hero-text">
-      <h1 class="v5-hero-title">QUICK BI × AIPRO 学习广场</h1>
-      <p class="v5-hero-sub">欢迎来到 QUICK BI × AIPRO 学习广场！<br>在这里学习产品课程、观看产品直播、真人导师陪练，<br>和我们一起探索 <em>智能数据分析之路</em>！</p>
-    </div>
-    <div class="v5-htabs">
-      <button type="button" class="v5-htab active" data-portal-goto="courses" style="--hc:#3b6fe0">
-        <span class="v5-htab-ic"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span>
-        <span class="v5-htab-info"><span class="v5-htab-t">系列课程</span><span class="v5-htab-d">按角色进阶 · 双产品线课程体系</span></span>
-      </button>
-      <button type="button" class="v5-htab" data-portal-goto="live" style="--hc:#a855f7">
-        <span class="v5-htab-ic"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 15l.9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9z"/></svg></span>
-        <span class="v5-htab-info"><span class="v5-htab-t">精选直播</span><span class="v5-htab-d">产品发布 · 行业实践双系列</span></span>
-      </button>
-      <button type="button" class="v5-htab" data-portal-goto="camp" style="--hc:#f97316">
-        <span class="v5-htab-ic"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/><line x1="22" y1="10" x2="22" y2="16"/></svg></span>
-        <span class="v5-htab-info"><span class="v5-htab-t">训练营</span><span class="v5-htab-d">新手 · AIPro · 大师三营滚动开班</span></span>
-      </button>
-    </div>
-  </div>
-</section><div class="px-6 pb-6 pt-0 animate-fade-in max-w-[1400px] mx-auto animate-fade-in max-w-[1400px] mx-auto"><div class="module-card" data-portal-view="courses" id="courses-view">
-<section id="roles">
-<nav class="course-tabs" aria-label="产品线切换">
-<button type="button" class="is-active" data-line-goto="aipro" style="--lc:hsl(262,83%,58%);--lbg:linear-gradient(135deg,hsl(262,83%,58%),hsl(291,64%,50%))">AIPro</button>
-<button type="button" data-line-goto="qbi" style="--lc:hsl(220,100%,59%);--lbg:linear-gradient(135deg,hsl(220,100%,59%),hsl(220,80%,47%))">Quick BI</button>
-</nav>
-<div class="line-block" data-line-of="aipro" style="--lcb:linear-gradient(135deg,hsl(262,83%,58%),hsl(291,64%,50%));"><div class="line-head"><div class="line-info"><h3 class="line-title">AIPro · AI 原生分析进阶之路</h3><span class="line-role line-role--analyst">业务及数据分析师</span></div><span class="line-count">共 9 个资源</span></div><div class="stage-grid">
-    <div class="stage-card" id="acc-aa1" data-line="aipro" data-stage="1" data-total="0" style="--sg:hsl(158,64%,40%)">
-      <div class="sc-art"><img src="https://robject.oss-cn-shanghai.aliyuncs.com/robject-publish/media/10001/596/1c311b7d-0b7f-4ed2-9f83-6c319a30f16e/t2i_20261021165829_0.png?OSSAccessKeyId=LTAI5t7D1JqXhJXGaf6JSHEx&amp;Expires=4946173174&amp;Signature=ezeod6af0qCK8ad6wNQoXAIGz2M%3D" alt="基础入门" loading="lazy"><span class="sc-num">1</span></div>
-      <div class="sc-body">
-        <div class="sc-name">基础入门</div>
-        <p class="sc-desc" title="认识 AIPro 是什么 · 建立产品全景认知">认识 AIPro 是什么 · 建立产品全景认知</p>
-        <div class="sc-meta">
-          <span class="sc-count">3 个资源</span>
-          <span class="sc-time">预计 5 分钟</span>
-        </div>
-      </div>
-      <div class="sc-course-list">
-        <a class="sc-course" data-learnkey="https://help.aliyun.com/zh/quick-bi/getting-started/quick-bi-aipro-getting-started-guide" data-learn="https://help.aliyun.com/zh/quick-bi/getting-started/quick-bi-aipro-getting-started-guide" href="https://help.aliyun.com/zh/quick-bi/getting-started/quick-bi-aipro-getting-started-guide" target="_blank" rel="noopener"><span class="sc-course-main">AIPro是什么</span><span class="sc-course-tag">AIPro 概览</span></a>
-        <a class="sc-course" data-learnkey="https://help.aliyun.com/zh/quick-bi/getting-started/quick-bi-aipro-getting-started-guide" data-learn="https://help.aliyun.com/zh/quick-bi/getting-started/quick-bi-aipro-getting-started-guide" href="https://help.aliyun.com/zh/quick-bi/getting-started/quick-bi-aipro-getting-started-guide" target="_blank" rel="noopener"><span class="sc-course-main">3 分钟，为AIPro接入数据</span><span class="sc-course-tag">数据接入</span></a>
-        <a class="sc-course" data-learnkey="https://help.aliyun.com/zh/quick-bi/getting-started/quick-bi-aipro-getting-started-guide" data-learn="https://help.aliyun.com/zh/quick-bi/getting-started/quick-bi-aipro-getting-started-guide" href="https://help.aliyun.com/zh/quick-bi/getting-started/quick-bi-aipro-getting-started-guide" target="_blank" rel="noopener"><span class="sc-course-main">不会SQL，自然语言实现问数分析</span><span class="sc-course-tag">AI 问数</span></a>
-      </div>
-    </div>
-    <div class="stage-card" id="acc-aa2" data-line="aipro" data-stage="2" data-total="0" style="--sg:hsl(220,100%,59%)">
-      <div class="sc-art"><img src="https://robject.oss-cn-shanghai.aliyuncs.com/robject-publish/media/10001/596/1c311b7d-0b7f-4ed2-9f83-6c319a30f16e/t2i_20261021165917_0.png?OSSAccessKeyId=LTAI5t7D1JqXhJXGaf6JSHEx&amp;Expires=4946173175&amp;Signature=A%2BeWWumKo%2Bn7GqmvxKAK0RDttfc%3D" alt="进阶成长" loading="lazy"><span class="sc-num">2</span></div>
-      <div class="sc-body">
-        <div class="sc-name">进阶成长</div>
-        <p class="sc-desc" title="日常分析任务，交给 AI">日常分析任务，交给 AI</p>
-        <div class="sc-meta">
-          <span class="sc-count">3 个资源</span>
-          <span class="sc-time">预计 15 分钟</span>
-        </div>
-      </div>
-      <div class="sc-course-list">
-        <a class="sc-course" data-learnkey="https://help.aliyun.com/zh/quick-bi/user-guide/visualized-report" data-learn="https://help.aliyun.com/zh/quick-bi/user-guide/visualized-report" href="https://help.aliyun.com/zh/quick-bi/user-guide/visualized-report" target="_blank" rel="noopener"><span class="sc-course-main">会前 5 分钟，AI 搭出会更新的看板</span><span class="sc-course-tag">AI Dashboard</span></a>
-        <a class="sc-course" data-learnkey="https://help.aliyun.com/zh/quick-bi/user-guide/document-report" data-learn="https://help.aliyun.com/zh/quick-bi/user-guide/document-report" href="https://help.aliyun.com/zh/quick-bi/user-guide/document-report" target="_blank" rel="noopener"><span class="sc-course-main">汇报不用熬夜：AI 把分析写成文档报告</span><span class="sc-course-tag">文档报告</span></a>
-        <a class="sc-course" data-learnkey="https://help.aliyun.com/zh/quick-bi/user-guide/html-report" data-learn="https://help.aliyun.com/zh/quick-bi/user-guide/html-report" href="https://help.aliyun.com/zh/quick-bi/user-guide/html-report" target="_blank" rel="noopener"><span class="sc-course-main">分析一键变网页：生成 HTML 报告</span><span class="sc-course-tag">HTML 报告</span></a>
-      </div>
-    </div>
-    <div class="stage-card" id="acc-aa3" data-line="aipro" data-stage="3" data-total="0" style="--sg:hsl(262,83%,58%)">
-      <div class="sc-art"><img src="https://robject.oss-cn-shanghai.aliyuncs.com/robject-publish/media/10001/596/1c311b7d-0b7f-4ed2-9f83-6c319a30f16e/t2i_20261021163424_0.png?OSSAccessKeyId=LTAI5t7D1JqXhJXGaf6JSHEx&amp;Expires=4946172214&amp;Signature=65O8u%2BJqpN7ZML%2BXS5rCid6lqUc%3D" alt="资深达人" loading="lazy"><span class="sc-num">3</span></div>
-      <div class="sc-body">
-        <div class="sc-name">资深达人</div>
-        <p class="sc-desc" title="专题视频，成为团队里的 AI 高手">专题视频，成为团队里的 AI 高手</p>
-        <div class="sc-meta">
-          <span class="sc-count">3 个资源</span>
-          <span class="sc-time">预计 10 分钟</span>
-        </div>
-      </div>
-      <div class="sc-course-list">
-        <a class="sc-course" data-learnkey="https://help.aliyun.com/zh/quick-bi/user-guide/skill-generation?spm=a2c4g.11186623.help-menu-30343.d_2_0_1_1_7.4bab1046Mq82Oa" data-learn="https://help.aliyun.com/zh/quick-bi/user-guide/skill-generation?spm=a2c4g.11186623.help-menu-30343.d_2_0_1_1_7.4bab1046Mq82Oa" href="https://help.aliyun.com/zh/quick-bi/user-guide/skill-generation?spm=a2c4g.11186623.help-menu-30343.d_2_0_1_1_7.4bab1046Mq82Oa" target="_blank" rel="noopener"><span class="sc-course-main"> 将分析过程变成可复用的skill </span><span class="sc-course-tag">技能生成</span></a>
-        <a class="sc-course" data-learnkey="https://help.aliyun.com/zh/quick-bi/user-guide/bind-im-channel-account?spm=a2c4g.11186623.help-menu-30343.d_2_0_1_2.76a21046pEkUcH" data-learn="https://help.aliyun.com/zh/quick-bi/user-guide/bind-im-channel-account?spm=a2c4g.11186623.help-menu-30343.d_2_0_1_2.76a21046pEkUcH" href="https://help.aliyun.com/zh/quick-bi/user-guide/bind-im-channel-account?spm=a2c4g.11186623.help-menu-30343.d_2_0_1_2.76a21046pEkUcH" target="_blank" rel="noopener"><span class="sc-course-main"> IM 办公软件中直接向 AIPro 提问</span><span class="sc-course-tag">IM 频道绑定</span></a>
-        <a class="sc-course" data-learnkey="https://help.aliyun.com/zh/quick-bi/user-guide/my-subscriptions?spm=a2c4g.11186623.help-menu-30343.d_2_0_2_4.489455dfYxsZLv" data-learn="https://help.aliyun.com/zh/quick-bi/user-guide/my-subscriptions?spm=a2c4g.11186623.help-menu-30343.d_2_0_2_4.489455dfYxsZLv" href="https://help.aliyun.com/zh/quick-bi/user-guide/my-subscriptions?spm=a2c4g.11186623.help-menu-30343.d_2_0_2_4.489455dfYxsZLv" target="_blank" rel="noopener"><span class="sc-course-main">每天 9 点自动生成日报并推送</span><span class="sc-course-tag">订阅任务</span></a>
-      </div>
-    </div>
-  </div></div>
-<div class="line-block" data-line-of="aipro" style="--lcb:linear-gradient(135deg,hsl(262,83%,58%),hsl(291,64%,50%));"><div class="line-head"><div class="line-info"><h3 class="line-title">AIPro · 企业落地三阶段</h3><span class="line-role line-role--admin">管理员</span></div><span class="line-count">共 10 个资源</span></div><div class="stage-grid">
-    <div class="stage-card" id="acc-am1" data-line="aipro" data-stage="1" data-total="0" style="--sg:hsl(220,100%,59%)">
-      <div class="sc-art"><img src="https://robject.oss-cn-shanghai.aliyuncs.com/robject-publish/media/10001/596/1c311b7d-0b7f-4ed2-9f83-6c319a30f16e/t2i_20261021163826_0.png?OSSAccessKeyId=LTAI5t7D1JqXhJXGaf6JSHEx&amp;Expires=4946172219&amp;Signature=SNpCuSfG0Z3UuLpnK22zXrufZ3o%3D" alt="账号与数据准备" loading="lazy"><span class="sc-num">1</span></div>
-      <div class="sc-body">
-        <div class="sc-name">账号与数据准备</div>
-        <p class="sc-desc" title="让企业的用户先用起来">让企业的用户先用起来</p>
-        <div class="sc-meta">
-          <span class="sc-count">2 个资源</span>
-          <span class="sc-time">预计 5 分钟</span>
-        </div>
-      </div>
-      <div class="sc-course-list">
-        <a class="sc-course" data-learnkey="https://help.aliyun.com/zh/quick-bi/user-guide/user-seats-and-permissions?spm=a2c4g.11186623.help-menu-30343.d_2_0_4_0.1c9911e8W0zlcD" data-learn="https://help.aliyun.com/zh/quick-bi/user-guide/user-seats-and-permissions?spm=a2c4g.11186623.help-menu-30343.d_2_0_4_0.1c9911e8W0zlcD" href="https://help.aliyun.com/zh/quick-bi/user-guide/user-seats-and-permissions?spm=a2c4g.11186623.help-menu-30343.d_2_0_4_0.1c9911e8W0zlcD" target="_blank" rel="noopener"><span class="sc-course-main">给公司成员开通产品使用权限</span><span class="sc-course-tag">账号与权限</span></a>
-        <a class="sc-course" data-learnkey="https://help.aliyun.com/zh/quick-bi/user-guide/data-management?spm=a2c4g.11186623.help-menu-30343.d_2_0_4_1.5fcb11e87jlNbp" data-learn="https://help.aliyun.com/zh/quick-bi/user-guide/data-management?spm=a2c4g.11186623.help-menu-30343.d_2_0_4_1.5fcb11e87jlNbp" href="https://help.aliyun.com/zh/quick-bi/user-guide/data-management?spm=a2c4g.11186623.help-menu-30343.d_2_0_4_1.5fcb11e87jlNbp" target="_blank" rel="noopener"><span class="sc-course-main">把企业数据资产接进 AI</span><span class="sc-course-tag">企业数据接入</span></a>
-      </div>
-    </div>
-    <div class="stage-card" id="acc-am2" data-line="aipro" data-stage="2" data-total="0" style="--sg:hsl(174,72%,42%)">
-      <div class="sc-art"><img src="https://robject.oss-cn-shanghai.aliyuncs.com/robject-publish/media/10001/596/1c311b7d-0b7f-4ed2-9f83-6c319a30f16e/t2i_20261021163925_0.png?OSSAccessKeyId=LTAI5t7D1JqXhJXGaf6JSHEx&amp;Expires=4946172221&amp;Signature=7nqiIT9tU452V1wMpv5kOpleJAE%3D" alt="进阶管理" loading="lazy"><span class="sc-num">2</span></div>
-      <div class="sc-body">
-        <div class="sc-name">进阶管理</div>
-        <p class="sc-desc" title="企业级配置 · 资产、知识、技能与 MCP">企业级配置 · 资产、知识、技能与 MCP</p>
-        <div class="sc-meta">
-          <span class="sc-count">4 个资源</span>
-          <span class="sc-time">预计 15 分钟</span>
-        </div>
-      </div>
-      <div class="sc-course-list">
-        <a class="sc-course" data-learnkey="https://help.aliyun.com/zh/quick-bi/user-guide/preconfigured-data-assets" data-learn="https://help.aliyun.com/zh/quick-bi/user-guide/preconfigured-data-assets" href="https://help.aliyun.com/zh/quick-bi/user-guide/preconfigured-data-assets" target="_blank" rel="noopener"><span class="sc-course-main">员工上手就有数可用</span><span class="sc-course-tag">预置数据资产</span></a>
-        <a class="sc-course" data-learnkey="https://help.aliyun.com/zh/quick-bi/user-guide/manage-knowledge" data-learn="https://help.aliyun.com/zh/quick-bi/user-guide/manage-knowledge" href="https://help.aliyun.com/zh/quick-bi/user-guide/manage-knowledge" target="_blank" rel="noopener"><span class="sc-course-main">把企业口径讲给 AI 听</span><span class="sc-course-tag">配置知识</span></a>
-        <a class="sc-course" data-learnkey="https://help.aliyun.com/zh/quick-bi/user-guide/skills-management" data-learn="https://help.aliyun.com/zh/quick-bi/user-guide/skills-management" href="https://help.aliyun.com/zh/quick-bi/user-guide/skills-management" target="_blank" rel="noopener"><span class="sc-course-main">把标准分析思路沉淀下来</span><span class="sc-course-tag">配置分析技能</span></a>
-        <a class="sc-course" data-learnkey="https://help.aliyun.com/zh/quick-bi/user-guide/mcp-management" data-learn="https://help.aliyun.com/zh/quick-bi/user-guide/mcp-management" href="https://help.aliyun.com/zh/quick-bi/user-guide/mcp-management" target="_blank" rel="noopener"><span class="sc-course-main">让 AI 用上外部工具和数据</span><span class="sc-course-tag">接入 MCP</span></a>
-      </div>
-    </div>
-    <div class="stage-card" id="acc-am3" data-line="aipro" data-stage="3" data-total="0" style="--sg:hsl(24,95%,53%)">
-      <div class="sc-art"><img src="https://robject.oss-cn-shanghai.aliyuncs.com/robject-publish/media/10001/596/1c311b7d-0b7f-4ed2-9f83-6c319a30f16e/t2i_20261021164038_0.png?OSSAccessKeyId=LTAI5t7D1JqXhJXGaf6JSHEx&amp;Expires=4946172222&amp;Signature=KPXyRJPlVl6flvKYSHDWF9zbLIk%3D" alt="推广应用" loading="lazy"><span class="sc-num">3</span></div>
-      <div class="sc-body">
-        <div class="sc-name">推广应用</div>
-        <p class="sc-desc" title="频道管理 · 用量配额 · 运营管理">频道管理 · 用量配额 · 运营管理</p>
-        <div class="sc-meta">
-          <span class="sc-count">3 个资源</span>
-          <span class="sc-time">预计 10 分钟</span>
-        </div>
-      </div>
-      <div class="sc-course-list">
-        <a class="sc-course" data-learnkey="https://help.aliyun.com/zh/quick-bi/user-guide/channel-management/?spm=a2c4g.11186623.help-menu-30343.d_2_0_4_7.5985385af09H8q" data-learn="https://help.aliyun.com/zh/quick-bi/user-guide/channel-management/?spm=a2c4g.11186623.help-menu-30343.d_2_0_4_7.5985385af09H8q" href="https://help.aliyun.com/zh/quick-bi/user-guide/channel-management/?spm=a2c4g.11186623.help-menu-30343.d_2_0_4_7.5985385af09H8q" target="_blank" rel="noopener"><span class="sc-course-main">让员工在企业 IM 中直接与 AIPro 对话</span><span class="sc-course-tag">频道管理</span></a>
-        <a class="sc-course" data-learnkey="https://help.aliyun.com/zh/quick-bi/user-guide/credit-management" data-learn="https://help.aliyun.com/zh/quick-bi/user-guide/credit-management" href="https://help.aliyun.com/zh/quick-bi/user-guide/credit-management" target="_blank" rel="noopener"><span class="sc-course-main">AI 用量看得见、花得省</span><span class="sc-course-tag">Credit 与配额</span></a>
-        <a class="sc-course" data-learnkey="https://help.aliyun.com/zh/quick-bi/user-guide/operations-management" data-learn="https://help.aliyun.com/zh/quick-bi/user-guide/operations-management" href="https://help.aliyun.com/zh/quick-bi/user-guide/operations-management" target="_blank" rel="noopener"><span class="sc-course-main">用户使用和回答情况一目了然</span><span class="sc-course-tag">运营管理</span></a>
-      </div>
-    </div>
-  </div></div>
-<div class="line-block" data-line-of="qbi" style="--lcb:linear-gradient(135deg,hsl(220,100%,59%),hsl(220,80%,47%));"><div class="line-head"><div class="line-info"><h3 class="line-title">Quick BI · 数据分析进阶之路</h3><span class="line-role line-role--analyst">业务及数据分析师</span></div><span class="line-count">共 13 个资源</span></div><div class="stage-grid">
-    <div class="stage-card" id="acc-qa1" data-line="qbi" data-stage="1" data-total="0" style="--sg:hsl(158,64%,40%)">
-      <div class="sc-art"><img src="https://robject.oss-cn-shanghai.aliyuncs.com/robject-publish/media/10001/596/1c311b7d-0b7f-4ed2-9f83-6c319a30f16e/t2i_20261021163515_0.png?OSSAccessKeyId=LTAI5t7D1JqXhJXGaf6JSHEx&amp;Expires=4946172216&amp;Signature=pujXrB41d9WaGNP3s5Mhvj5YfEw%3D" alt="基础入门" loading="lazy"><span class="sc-num">1</span></div>
-      <div class="sc-body">
-        <div class="sc-name">基础入门</div>
-        <p class="sc-desc" title="认识产品、看懂功能链路">认识产品、看懂功能链路</p>
-        <div class="sc-meta">
-          <span class="sc-count">3 个资源</span>
-          <span class="sc-time">预计 10 分钟</span>
-        </div>
-      </div>
-      <div class="sc-course-list">
-        <a class="sc-course" data-learnkey="https://cloud.video.taobao.com/play/u/null/p/1/e/6/t/1/437711623049.mp4" data-learn="https://cloud.video.taobao.com/play/u/null/p/1/e/6/t/1/437711623049.mp4" href="https://cloud.video.taobao.com/play/u/null/p/1/e/6/t/1/437711623049.mp4" target="_blank" rel="noopener"><span class="sc-course-main">为什么是 Quick BI？让业务决策触手可及</span><span class="sc-course-tag">产品定位</span></a>
-        <a class="sc-course" data-learnkey="https://cloud.video.taobao.com/play/u/null/p/1/e/6/t/1/437405237684.mp4" data-learn="https://cloud.video.taobao.com/play/u/null/p/1/e/6/t/1/437405237684.mp4" href="https://cloud.video.taobao.com/play/u/null/p/1/e/6/t/1/437405237684.mp4" target="_blank" rel="noopener"><span class="sc-course-main">3 分钟看懂 Quick BI 的产品全貌</span><span class="sc-course-tag">产品矩阵</span></a>
-        <a class="sc-course" data-learnkey="https://cloud.video.taobao.com/play/u/null/p/1/e/6/t/1/437416357006.mp4" data-learn="https://cloud.video.taobao.com/play/u/null/p/1/e/6/t/1/437416357006.mp4" href="https://cloud.video.taobao.com/play/u/null/p/1/e/6/t/1/437416357006.mp4" target="_blank" rel="noopener"><span class="sc-course-main">用户旅程：看懂QuickBI功能链路</span><span class="sc-course-tag">用户旅程</span></a>
-      </div>
-    </div>
-    <div class="stage-card" id="acc-qa2" data-line="qbi" data-stage="2" data-total="0" style="--sg:hsl(220,100%,59%)">
-      <div class="sc-art"><img src="https://robject.oss-cn-shanghai.aliyuncs.com/robject-publish/media/10001/596/1c311b7d-0b7f-4ed2-9f83-6c319a30f16e/t2i_20261021163630_0.png?OSSAccessKeyId=LTAI5t7D1JqXhJXGaf6JSHEx&amp;Expires=4946172217&amp;Signature=hHcUQg2z2MGXK2eZUGZw%2F9NPfL8%3D" alt="进阶成长" loading="lazy"><span class="sc-num">2</span></div>
-      <div class="sc-body">
-        <div class="sc-name">进阶成长</div>
-        <p class="sc-desc" title="从数据到看板，把全链路走通">从数据到看板，把全链路走通</p>
-        <div class="sc-meta">
-          <span class="sc-count">7 个资源</span>
-          <span class="sc-time">预计 2 小时</span>
-        </div>
-      </div>
-      <div class="sc-course-list">
-        <a class="sc-course" data-learnkey="https://cloud.video.taobao.com/play/u/null/p/1/e/6/t/1/437130576277.mp4" data-learn="https://cloud.video.taobao.com/play/u/null/p/1/e/6/t/1/437130576277.mp4" href="https://cloud.video.taobao.com/play/u/null/p/1/e/6/t/1/437130576277.mp4" target="_blank" rel="noopener"><span class="sc-course-main">搭一块老板爱看的经营看板</span><span class="sc-course-tag">仪表板</span></a>
-        <a class="sc-course" data-learnkey="https://cloud.video.taobao.com/play/u/null/p/1/e/6/t/1/437966487338.mp4" data-learn="https://cloud.video.taobao.com/play/u/null/p/1/e/6/t/1/437966487338.mp4" href="https://cloud.video.taobao.com/play/u/null/p/1/e/6/t/1/437966487338.mp4" target="_blank" rel="noopener"><span class="sc-course-main">实机演示：从零搭建利润监控看板</span><span class="sc-course-tag">仪表板</span></a>
-        <a class="sc-course" data-learnkey="https://help.aliyun.com/zh/quick-bi/videos/create-an-ad-hoc-analysis" data-learn="https://help.aliyun.com/zh/quick-bi/videos/create-an-ad-hoc-analysis" href="https://help.aliyun.com/zh/quick-bi/videos/create-an-ad-hoc-analysis" target="_blank" rel="noopener"><span class="sc-course-main">临时要数不求人：即席分析</span><span class="sc-course-tag">即席分析</span></a>
-        <a class="sc-course" data-learnkey="https://help.aliyun.com/zh/quick-bi/videos/create-a-workbook-1" data-learn="https://help.aliyun.com/zh/quick-bi/videos/create-a-workbook-1" href="https://help.aliyun.com/zh/quick-bi/videos/create-a-workbook-1" target="_blank" rel="noopener"><span class="sc-course-main">零基础做一张电子表格：业务明细表入门</span><span class="sc-course-tag">电子表格</span></a>
-        <a class="sc-course" data-learnkey="https://help.aliyun.com/zh/quick-bi/videos/learn-self-service-fetching" data-learn="https://help.aliyun.com/zh/quick-bi/videos/learn-self-service-fetching" href="https://help.aliyun.com/zh/quick-bi/videos/learn-self-service-fetching" target="_blank" rel="noopener"><span class="sc-course-main">百万行数据一键下载回本地</span><span class="sc-course-tag">自助取数</span></a>
-        <a class="sc-course" data-learnkey="https://help.aliyun.com/zh/quick-bi/videos/create-a-bi-portal" data-learn="https://help.aliyun.com/zh/quick-bi/videos/create-a-bi-portal" href="https://help.aliyun.com/zh/quick-bi/videos/create-a-bi-portal" target="_blank" rel="noopener"><span class="sc-course-main">把团队报表装进一个门户</span><span class="sc-course-tag">数据门户</span></a>
-        <a class="sc-course" data-learnkey="https://help.aliyun.com/zh/quick-bi/videos/topic-7-data-big-screen" data-learn="https://help.aliyun.com/zh/quick-bi/videos/topic-7-data-big-screen" href="https://help.aliyun.com/zh/quick-bi/videos/topic-7-data-big-screen" target="_blank" rel="noopener"><span class="sc-course-main">数据大屏是什么：一块屏讲清业务全局</span><span class="sc-course-tag">数据大屏</span></a>
-      </div>
-    </div>
-    <div class="stage-card" id="acc-qa3" data-line="qbi" data-stage="3" data-total="0" style="--sg:hsl(262,83%,58%)">
-      <div class="sc-art"><img src="https://robject.oss-cn-shanghai.aliyuncs.com/robject-publish/media/10001/596/1c311b7d-0b7f-4ed2-9f83-6c319a30f16e/t2i_20261021163725_0.png?OSSAccessKeyId=LTAI5t7D1JqXhJXGaf6JSHEx&amp;Expires=4946172218&amp;Signature=lzFKRDfseKXlkLsSEgMdBUN29Q0%3D" alt="资深达人" loading="lazy"><span class="sc-num">3</span></div>
-      <div class="sc-body">
-        <div class="sc-name">资深达人</div>
-        <p class="sc-desc" title="专题视频，解锁高阶能力">专题视频，解锁高阶能力</p>
-        <div class="sc-meta">
-          <span class="sc-count">3 个资源</span>
-          <span class="sc-time">预计 1 小时</span>
-        </div>
-      </div>
-      <div class="sc-course-list">
-        <a class="sc-course" data-learnkey="https://help.aliyun.com/zh/quick-bi/videos/create-a-data-visualization-task" data-learn="https://help.aliyun.com/zh/quick-bi/videos/create-a-data-visualization-task" href="https://help.aliyun.com/zh/quick-bi/videos/create-a-data-visualization-task" target="_blank" rel="noopener"><span class="sc-course-main">数据大屏实操：从零搭建完整演示</span><span class="sc-course-tag">数据大屏</span></a>
-        <a class="sc-course" data-learnkey="https://help.aliyun.com/zh/quick-bi/videos/topic-3-interactive-filling" data-learn="https://help.aliyun.com/zh/quick-bi/videos/topic-3-interactive-filling" href="https://help.aliyun.com/zh/quick-bi/videos/topic-3-interactive-filling" target="_blank" rel="noopener"><span class="sc-course-main">用一张复杂表格收集全公司数据</span><span class="sc-course-tag">交互式填报</span></a>
-        <a class="sc-course" data-learnkey="https://help.aliyun.com/zh/quick-bi/videos/quick-bi-acceleration-engine" data-learn="https://help.aliyun.com/zh/quick-bi/videos/quick-bi-acceleration-engine" href="https://help.aliyun.com/zh/quick-bi/videos/quick-bi-acceleration-engine" target="_blank" rel="noopener"><span class="sc-course-main">亿级数据、毫秒级响应的秘密</span><span class="sc-course-tag">加速引擎</span></a>
-      </div>
-    </div>
-  </div></div>
-<div class="line-block" data-line-of="qbi" style="--lcb:linear-gradient(135deg,hsl(220,100%,59%),hsl(220,80%,47%));"><div class="line-head"><div class="line-info"><h3 class="line-title">Quick BI · 企业落地三阶段</h3><span class="line-role line-role--admin">管理员</span></div><span class="line-count">共 7 个资源</span></div><div class="stage-grid">
-    <div class="stage-card" id="acc-qm1" data-line="qbi" data-stage="1" data-total="0" style="--sg:hsl(220,100%,59%)">
-      <div class="sc-art"><img src="https://robject.oss-cn-shanghai.aliyuncs.com/robject-publish/media/10001/596/1c311b7d-0b7f-4ed2-9f83-6c319a30f16e/t2i_20261021164127_0.png?OSSAccessKeyId=LTAI5t7D1JqXhJXGaf6JSHEx&amp;Expires=4946172223&amp;Signature=EvrRPUPFIHFqYfVB9aKZm7ReOps%3D" alt="数据准备" loading="lazy"><span class="sc-num">1</span></div>
-      <div class="sc-body">
-        <div class="sc-name">数据准备</div>
-        <p class="sc-desc" title="数据源接入 · 数据准备 · 数据集建模">数据源接入 · 数据准备 · 数据集建模</p>
-        <div class="sc-meta">
-          <span class="sc-count">3 个资源</span>
-          <span class="sc-time">预计 40 分钟</span>
-        </div>
-      </div>
-      <div class="sc-course-list">
-        <a class="sc-course" data-learnkey="https://help.aliyun.com/zh/quick-bi/videos/connect-to-a-data-source" data-learn="https://help.aliyun.com/zh/quick-bi/videos/connect-to-a-data-source" href="https://help.aliyun.com/zh/quick-bi/videos/connect-to-a-data-source" target="_blank" rel="noopener"><span class="sc-course-main">连接你的第一个数据源</span><span class="sc-course-tag">连接数据源</span></a>
-        <a class="sc-course" data-learnkey="https://help.aliyun.com/zh/quick-bi/videos/etl-2" data-learn="https://help.aliyun.com/zh/quick-bi/videos/etl-2" href="https://help.aliyun.com/zh/quick-bi/videos/etl-2" target="_blank" rel="noopener"><span class="sc-course-main">不会 SQL，也能做好数据准备</span><span class="sc-course-tag">数据准备</span></a>
-        <a class="sc-course" data-learnkey="https://help.aliyun.com/zh/quick-bi/videos/configure-a-dataset" data-learn="https://help.aliyun.com/zh/quick-bi/videos/configure-a-dataset" href="https://help.aliyun.com/zh/quick-bi/videos/configure-a-dataset" target="_blank" rel="noopener"><span class="sc-course-main">统一全公司的数据口径：建模</span><span class="sc-course-tag">数据集建模</span></a>
-      </div>
-    </div>
-    <div class="stage-card" id="acc-qm2" data-line="qbi" data-stage="2" data-total="0" style="--sg:hsl(174,72%,42%)">
-      <div class="sc-art"><img src="https://robject.oss-cn-shanghai.aliyuncs.com/robject-publish/media/10001/596/1c311b7d-0b7f-4ed2-9f83-6c319a30f16e/t2i_20261021164211_0.png?OSSAccessKeyId=LTAI5t7D1JqXhJXGaf6JSHEx&amp;Expires=4946172225&amp;Signature=RxJcdA2eXrxTqCmgJqs4b9M%2FMac%3D" alt="进阶管理" loading="lazy"><span class="sc-num">2</span></div>
-      <div class="sc-body">
-        <div class="sc-name">进阶管理</div>
-        <p class="sc-desc" title="安全嵌入 · 监控告警">安全嵌入 · 监控告警</p>
-        <div class="sc-meta">
-          <span class="sc-count">2 个资源</span>
-          <span class="sc-time">预计 60 分钟</span>
-        </div>
-      </div>
-      <div class="sc-course-list">
-        <a class="sc-course" data-learnkey="https://help.aliyun.com/zh/quick-bi/videos/topic-5-enhanced-embedding-of-tickets" data-learn="https://help.aliyun.com/zh/quick-bi/videos/topic-5-enhanced-embedding-of-tickets" href="https://help.aliyun.com/zh/quick-bi/videos/topic-5-enhanced-embedding-of-tickets" target="_blank" rel="noopener"><span class="sc-course-main">把报表安全地嵌进业务系统</span><span class="sc-course-tag">安全嵌入</span></a>
-        <a class="sc-course" data-learnkey="https://help.aliyun.com/zh/quick-bi/videos/topic-6-monitoring-and-alarming" data-learn="https://help.aliyun.com/zh/quick-bi/videos/topic-6-monitoring-and-alarming" href="https://help.aliyun.com/zh/quick-bi/videos/topic-6-monitoring-and-alarming" target="_blank" rel="noopener"><span class="sc-course-main">别等老板发现报表没数：监控与告警</span><span class="sc-course-tag">监控告警</span></a>
-      </div>
-    </div>
-    <div class="stage-card" id="acc-qm3" data-line="qbi" data-stage="3" data-total="0" style="--sg:hsl(24,95%,53%)">
-      <div class="sc-art"><img src="https://robject.oss-cn-shanghai.aliyuncs.com/robject-publish/media/10001/596/1c311b7d-0b7f-4ed2-9f83-6c319a30f16e/t2i_20261021164316_0.png?OSSAccessKeyId=LTAI5t7D1JqXhJXGaf6JSHEx&amp;Expires=4946172226&amp;Signature=bJWXbSv66swM74PXqRWxLGUI%2F78%3D" alt="推广应用" loading="lazy"><span class="sc-num">3</span></div>
-      <div class="sc-body">
-        <div class="sc-name">推广应用</div>
-        <p class="sc-desc" title="专业版能力 · 移动微应用">专业版能力 · 移动微应用</p>
-        <div class="sc-meta">
-          <span class="sc-count">2 个资源</span>
-          <span class="sc-time">预计 90 分钟</span>
-        </div>
-      </div>
-      <div class="sc-course-list">
-        <a class="sc-course" data-learnkey="https://help.aliyun.com/zh/quick-bi/videos/topic-2-mobile-micro-applications" data-learn="https://help.aliyun.com/zh/quick-bi/videos/topic-2-mobile-micro-applications" href="https://help.aliyun.com/zh/quick-bi/videos/topic-2-mobile-micro-applications" target="_blank" rel="noopener"><span class="sc-course-main">让报表跟着员工跑：移动微应用</span><span class="sc-course-tag">移动微应用</span></a>
-        <a class="sc-course" data-learnkey="https://help.aliyun.com/zh/quick-bi/videos/topic-1-introduction-to-the-professional-edition" data-learn="https://help.aliyun.com/zh/quick-bi/videos/topic-1-introduction-to-the-professional-edition" href="https://help.aliyun.com/zh/quick-bi/videos/topic-1-introduction-to-the-professional-edition" target="_blank" rel="noopener"><span class="sc-course-main">一个后台管好全公司的报表资产</span><span class="sc-course-tag">专业版能力</span></a>
-      </div>
-    </div>
-  </div></div>
-</section></div><section class="v5-live module-card" data-portal-view="live" style="display:none"><nav class="course-tabs live-tabs" aria-label="直播分类切换" style="--lc:#a855f7;--lbg:linear-gradient(135deg,#a855f7,#6366f1)"><button type="button" class="is-active" data-live-goto="live-release">产品发布</button><button type="button" data-live-goto="live-practice">行业实践</button></nav><div class="v5-series" id="live-release"><div class="v5-series-head"><span class="v5-sicon" style="--sc:#3b6fe0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91 0z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></span><div><h2>产品发布</h2><div class="v5-sdesc">新版本第一时间解读，跟着产品经理看更新</div></div><span class="v5-scount">1 期</span></div><div class="rail-wrap"><button type="button" class="rail-btn rail-prev" aria-label="上一页"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button><div class="rail"><div class="rail-item"><div class="lv-card group cursor-pointer" style="--lg1:#1d4ed8;--lg2:#3b82f6"><div class="lv-thumb"><img src="https://img.alicdn.com/imgextra/i2/O1CN01brMHLfzGOhF3thAe_!!6000000001021-2-tps-1920-1080.png" alt="Quick BI AIPro 发布直播" class="absolute inset-0 w-full h-full object-cover transition-smooth group-hover:scale-105"><div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-smooth"><div class="flex items-center justify-center rounded-full backdrop-blur-sm" style="width:72px;height:72px;background:rgba(15,23,42,0.78);border:2px solid rgba(255,255,255,0.9)"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-play text-white ml-1" style="width:32px;height:32px"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg></div></div><span class="lv-badge">回放</span></div><div class="lv-body"><h3>Quick BI AIPro 发布直播</h3><p class="lv-meta">2026-08-12 · Quick BI 产品团队</p><a class="lv-state replay" href="https://n.dingtalk.com/dingding/live-room/index.html?roomId=z7Mdfv8AfQ&liveUuid=5bbd42ae-b4ad-4c15-928d-33ac36178aef" target="_blank" rel="noopener">已结束 · 观看回放</a></div></div></div></div><button type="button" class="rail-btn rail-next" aria-label="下一页"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button></div></div><div class="v5-series" id="live-practice"><div class="v5-series-head"><span class="v5-sicon" style="--sc:#a855f7"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px"><path d="M12 2a3 3 0 0 1 3 3v6a3 3 0 0 1-6 0V5a3 3 0 0 1 3-3z"/><path d="M19 10v1a7 7 0 0 1-14 0v-1"/><path d="M12 18v4"/></svg></span><div><h2>行业实践</h2><div class="v5-sdesc">真实客户场景拆解，看同行如何用好数据</div></div><span class="v5-scount">3 期</span></div><div class="rail-wrap"><button type="button" class="rail-btn rail-prev" aria-label="上一页"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button><div class="rail"><div class="rail-item"><div class="lv-card group cursor-pointer" style="--lg1:#0f6f6c;--lg2:#2aa7a0"><div class="lv-thumb"><img src="https://img.alicdn.com/imgextra/i3/O1CN01QaCI4kgnlFD3thAe_!!6000000000380-2-tps-1920-1080.png" alt="爱茉莉：美妆投放 · 投放 ROI 自主分析" class="absolute inset-0 w-full h-full object-cover transition-smooth group-hover:scale-105"><div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-smooth"><div class="flex items-center justify-center rounded-full backdrop-blur-sm" style="width:72px;height:72px;background:rgba(15,23,42,0.78);border:2px solid rgba(255,255,255,0.9)"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-play text-white ml-1" style="width:32px;height:32px"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg></div></div><span class="lv-badge">回放</span></div><div class="lv-body"><h3>爱茉莉：美妆投放 · 投放 ROI 自主分析</h3><p class="lv-meta">2026-08-20 · Quick BI 产品运营</p><a class="lv-state replay" href="https://n.dingtalk.com/dingding/live-room/index.html?roomId=u7ynZBbV9X&liveUuid=b15105db-cd30-465e-9ea3-dce537a195a1" target="_blank" rel="noopener">已结束 · 观看回放</a></div></div></div><div class="rail-item"><div class="lv-card group cursor-pointer" style="--lg1:#1e5aa8;--lg2:#4a90d9"><div class="lv-thumb"><img src="https://img.alicdn.com/imgextra/i3/O1CN014K73IlTqxIF3thAe_!!6000000006706-2-tps-1920-1080.png" alt="万科集团：集团财务 · 管理费率优化" class="absolute inset-0 w-full h-full object-cover transition-smooth group-hover:scale-105"><div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-smooth"><div class="flex items-center justify-center rounded-full backdrop-blur-sm" style="width:72px;height:72px;background:rgba(15,23,42,0.78);border:2px solid rgba(255,255,255,0.9)"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-play text-white ml-1" style="width:32px;height:32px"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg></div></div><span class="lv-badge">回放</span></div><div class="lv-body"><h3>万科集团：集团财务 · 管理费率优化</h3><p class="lv-meta">2026-08-20 · Quick BI 产品运营</p><a class="lv-state replay" href="https://n.dingtalk.com/dingding/live-room/index.html?roomId=u7ynZBbV9X&liveUuid=b15105db-cd30-465e-9ea3-dce537a195a1" target="_blank" rel="noopener">已结束 · 观看回放</a></div></div></div><div class="rail-item"><div class="lv-card group cursor-pointer" style="--lg1:#5b3fb5;--lg2:#8d6ae0"><div class="lv-thumb"><img src="https://img.alicdn.com/imgextra/i1/O1CN01XkPhNUokTCF3thAe_!!6000000004650-2-tps-1920-1080.png" alt="易方达：基金客户运营 · 理解 13 类客户行为" class="absolute inset-0 w-full h-full object-cover transition-smooth group-hover:scale-105"><div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-smooth"><div class="flex items-center justify-center rounded-full backdrop-blur-sm" style="width:72px;height:72px;background:rgba(15,23,42,0.78);border:2px solid rgba(255,255,255,0.9)"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-play text-white ml-1" style="width:32px;height:32px"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg></div></div><span class="lv-badge">回放</span></div><div class="lv-body"><h3>易方达：基金客户运营 · 理解 13 类客户行为</h3><p class="lv-meta">2026-08-20 · Quick BI 产品运营</p><a class="lv-state replay" href="https://n.dingtalk.com/dingding/live-room/index.html?roomId=u7ynZBbV9X&liveUuid=b15105db-cd30-465e-9ea3-dce537a195a1" target="_blank" rel="noopener">已结束 · 观看回放</a></div></div></div></div><button type="button" class="rail-btn rail-next" aria-label="下一页"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button></div><div class="more-links"><a class="more-link" href="https://bi.aliyun.com/hub/cases" target="_blank" rel="noopener"><span class="ml-ico" style="--mc:#a855f7"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><span class="ml-txt"><b>更多客户案例</b><span>各行业客户的数据实践</span></span><svg class="ml-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a><a class="more-link" href="https://bi.aliyun.com/hub/demo-center" target="_blank" rel="noopener"><span class="ml-ico" style="--mc:#3b82f6"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></span><span class="ml-txt"><b>行业实操 Demo</b><span>在线体验行业场景演示</span></span><svg class="ml-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a></div></div></section><section class="v5-live module-card" data-portal-view="camp" style="display:none"><div class="camp-scope"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none" aria-hidden="true">
+</style>
+</head><body><div id="root"><div class="min-h-screen bg-background"><div class="px-6 pb-6 pt-6 max-w-[1400px] mx-auto"><section class="v5-live module-card"><div class="camp-scope"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none" aria-hidden="true">
   <symbol id="i-grad" viewBox="0 0 24 24"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/><line x1="22" y1="10" x2="22" y2="16"/></symbol>
   <symbol id="i-sprout" viewBox="0 0 24 24"><path d="M12 22v-9"/><path d="M12 13a6.5 6.5 0 0 1 6.5-6.5C18.8 10 16.6 13 12 13z"/><path d="M12 13a6.5 6.5 0 0 0-6.5-6.5C5.2 10 7.4 13 12 13z"/></symbol>
   <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 2l1.9 6.1L20 10l-6.1 1.9L12 18l-1.9-6.1L4 10l6.1-1.9L12 2z"/></symbol>
@@ -3843,7 +3565,33 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
   <symbol id="i-arrow" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></symbol>
   <symbol id="i-flag" viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></symbol>
   <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none"/></symbol>
-</svg><main class="main">
+</svg>
+
+  <!-- 大首图 KV（2026-09-11 v4 版式）：左文案 + 右 AiPro 产品视觉（hero-aipro.webp，1228×720 透明底），
+       首图本身不画底色，直接透出容器底色；≤1120px 收紧留白、≤900px 上下堆叠（文案在上、图在下居中）。
+       样式沿用 .camp-scope .hero-kv*（含响应式断点），锚点导航仍在首图下方 -->
+  <section class="hero-kv reveal" aria-label="页面主视觉">
+    <div class="hero-kv-inner">
+      <div class="hero-kv-copy">
+        <p class="hero-eyebrow">阿里云智能集团 × 瓴羊 官方出品</p>
+        <h1 class="hero-title">Quick BI <em>训练营</em></h1>
+        <p class="hero-sub">新手入门 · AIPro 进阶 · 大师精进 ——<br>多期训练营滚动开班，零基础也能跟着学</p>
+        <div class="hero-chips" aria-label="训练营关键信息">
+          <span class="hero-chip">3 大训练营滚动开班</span>
+          <span class="hero-chip">5 天系统打卡</span>
+          <span class="hero-chip">官方认证证书</span>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn--brand btn--lg" href="https://ch6egz.aliwork.com/o/baoming1123" target="_blank" rel="noopener">立即报名最新训练营<svg class="icon"><use href="#i-arrow" xlink:href="#i-arrow"/></svg></a>
+          <a class="btn btn--line btn--lg" href="#schedule">查看课程大纲</a>
+        </div>
+      </div>
+      <img class="hero-kv-img" src="./hero-aipro.webp" width="1228" height="720" fetchpriority="high"
+           alt="Quick BI AiPro 产品视觉：能力成长弧线、分析力 / 理解力 / 行动力 / 可信度 / 成长性 UP 标签与对话式分析输入台">
+    </div>
+  </section>
+
+<main class="main">
 
     <!-- 页内锚点导航（滚动跟随高亮，见 main.js）+ 顶部报名 CTA -->
     <nav class="anchor-tabs" id="anchorTabs" aria-label="页内导航">
@@ -3852,7 +3600,7 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
       <a href="#tutors">讲师介绍</a>
       <a href="#rewards">激励与认证</a>
       <a href="#faq">常见问题</a>
-      <a class="nav-join" href="https://ch6egz.aliwork.com/o/baoming1026" target="_blank" rel="noopener">立即报名</a>
+      <a class="nav-join" href="https://ch6egz.aliwork.com/o/baoming1123" target="_blank" rel="noopener">立即报名</a>
     </nav>
 
     <!-- ============ S1 训练营汇总（含亮点、选营指引两个小节） ============ -->
@@ -3866,9 +3614,9 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
       </header>
 
       <div class="camps">
-        <!-- 卡 1：新手训练营（海报式长卡：活动介绍 + 课程速览 + 亮点；已结营：复用灰蓝弱化横幅 camp-flag--muted camp-flag--newbie + 置灰按钮 btn--disabled；2026-10-16 新手营结营，撤下本期报名中，班期轮换至 AIPro 营） -->
+        <!-- 卡 1：新手训练营（海报式长卡：活动介绍 + 课程速览 + 亮点；2026-11-13 班期轮换，1109 班期已结营：灰蓝弱化横幅 camp-flag--muted camp-flag--newbie + tag--done 已结营，按钮置灰） -->
         <article class="camp camp--pc pc-c--newbie">
-          <p class="camp-flag camp-flag--muted camp-flag--newbie"><b>已结营</b><span class="camp-flag-date">10 月 12 日 – 10 月 16 日</span></p>
+          <p class="camp-flag camp-flag--muted camp-flag--newbie"><b>已结营</b><span class="camp-flag-date">11 月 9 日 – 11 月 13 日</span></p>
           <div class="pc-hero pc-hero--newbie">
             <span class="tag tag--done pc-hero-tag">已结营</span>
             <div class="pc-brands"><span>阿里云智能集团 × 瓴羊</span></div>
@@ -3881,7 +3629,7 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
             <section class="pc-sec">
               <h4 class="pc-label">活动介绍</h4>
               <p class="pc-intro">面向零基础用户和新手用户的官方学习活动。<br> 提供教学视频与习题，由简入深搭建仪表板。<br> 更有技术专家全程答疑，抽奖证书应有尽有</p>
-              <p class="pc-chips"><b>5 天</b><b>10 月 12 日 – 10 月 16 日</b><b>每天约 30–50 分钟</b></p>
+              <p class="pc-chips"><b>5 天</b><b>11 月 9 日 – 11 月 13 日</b><b>每天约 30–50 分钟</b></p>
             </section>
             <section class="pc-sec">
               <h4 class="pc-label">课程速览<span>五个主题 · 由浅入深</span></h4>
@@ -3903,14 +3651,14 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
             </section>
           </div>
           <div class="pc-foot">
-            <!-- 新手营报名入口：2026-10-16 结营后置灰停用（不再跳转报名表单；下期开班后重新启用） -->
+            <!-- 新手营报名入口：1109 班期已结营，按钮置灰禁用（2026-11-13 班期轮换） -->
             <span class="btn btn--sm btn--disabled">报名已结束</span>
           </div>
         </article>
 
-        <!-- 卡 2：AIPro 训练营（海报式长卡；已结营：复用灰橙弱化横幅 camp-flag--muted camp-flag--aipro + 置灰按钮 btn--disabled；2026-10-22 班期轮换，AIPro 营结营撤下本期报名中，大师营接棒） -->
+        <!-- 卡 2：AIPro 训练营（海报式长卡；2026-11-16 班期轮换，1116 班期报名截止：灰橙弱化横幅 camp-flag--muted camp-flag--aipro + tag--done 已结营，按钮置灰） -->
         <article class="camp camp--pc pc-c--aipro">
-          <p class="camp-flag camp-flag--muted camp-flag--aipro"><b>已结营</b><span class="camp-flag-date">10 月 19 日 – 10 月 23 日</span></p>
+          <p class="camp-flag camp-flag--muted camp-flag--aipro"><b>已结营</b><span class="camp-flag-date">11 月 16 日 – 11 月 20 日</span></p>
           <div class="pc-hero pc-hero--aipro">
             <span class="tag tag--done pc-hero-tag">已结营</span>
             <div class="pc-brands"><span>阿里云智能集团 × 瓴羊</span></div>
@@ -3923,7 +3671,7 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
             <section class="pc-sec">
               <h4 class="pc-label">活动介绍</h4>
               <p class="pc-intro">全场景能力开放试用，有教学有案例更有实战演练。<br> 速通全新AI-native产品，解锁多种分析产物。<br> 深入AI数据项目，掌握如何高效配置快速落地。</p>
-              <p class="pc-chips"><b>5 天</b><b>10 月 19 日 – 10 月 23 日</b><b>每天约 40 分钟</b></p>
+              <p class="pc-chips"><b>5 天</b><b>11 月 16 日 – 11 月 20 日</b><b>每天约 40 分钟</b></p>
             </section>
             <section class="pc-sec">
               <h4 class="pc-label">课程速览<span>五个主题 · 由浅入深</span></h4>
@@ -3945,16 +3693,16 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
             </section>
           </div>
           <div class="pc-foot">
-            <!-- AIPro 报名入口：2026-10-22 结营后置灰停用（1019 班期表单 AIPro1019-Baoming 已下线；下期开班后重新启用） -->
+            <!-- AIPro 报名入口：1116 班期报名截止，按钮置灰禁用（2026-11-16 班期轮换） -->
             <span class="btn btn--sm btn--disabled">报名已结束</span>
           </div>
         </article>
 
-        <!-- 卡 3：大师训练营（海报式长卡；本期报名中：亮紫报名横幅 + 紫色柔光突出显示，样式复用 .camp-flag / .pc-c--master.is-live；2026-10-22 班期轮换，大师营接棒本期报名） -->
+        <!-- 卡 3：大师训练营（海报式长卡；本期报名中：亮紫报名横幅 + 紫色柔光突出显示，样式复用 .camp-flag / .pc-c--master.is-live；2026-11-16 班期轮换，1123 班期接棒本期报名，表单 baoming1123） -->
         <article class="camp camp--pc pc-c--master is-live">
-          <p class="camp-flag"><b>🔥本期报名中🔥</b><span class="camp-flag-date">10 月 26 日开营</span></p>
+          <p class="camp-flag"><b>🔥本期报名中🔥</b><span class="camp-flag-date">11 月 23 日开营</span></p>
           <div class="pc-hero pc-hero--master">
-            <a class="tag tag--live pc-hero-tag" href="https://ch6egz.aliwork.com/o/baoming1026" target="_blank" rel="noopener">报名中</a>
+            <a class="tag tag--live pc-hero-tag" href="https://ch6egz.aliwork.com/o/baoming1123" target="_blank" rel="noopener">报名中</a>
             <div class="pc-brands"><span>阿里云智能集团 × 瓴羊</span></div>
             <h3 class="pc-title">大师训练营</h3>
             <div class="pc-pillrow">
@@ -3965,7 +3713,7 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
             <section class="pc-sec">
               <h4 class="pc-label">活动介绍</h4>
               <p class="pc-intro">面向非新手用户的官方进阶提升课程。<br> 解锁新功能、聚焦表格、函数及占位符。<br> 掌握高效配置秘籍，助力业务快速落地。</p>
-              <p class="pc-chips"><b>5 天</b><b>10 月 26 日 – 10 月 30 日</b><b>每天 1 节课</b></p>
+              <p class="pc-chips"><b>5 天</b><b>11 月 23 日 – 11 月 27 日</b><b>每天 1 节课</b></p>
             </section>
             <section class="pc-sec">
               <h4 class="pc-label">课程速览<span>五个主题 · 由浅入深</span></h4>
@@ -3987,8 +3735,8 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
             </section>
           </div>
           <div class="pc-foot">
-            <!-- 大师营报名入口：宜搭表单按班期独立（1026 班期表单 baoming1026；2026-10-22 班期轮换后本卡为本期报名中，高亮横幅 + 报名中角标同步生效） -->
-            <a class="btn btn--brand btn--sm" href="https://ch6egz.aliwork.com/o/baoming1026" target="_blank" rel="noopener">立即报名</a>
+            <!-- 大师营报名入口：1123 班期表单 baoming1123（2026-11-16 班期轮换后本卡为本期报名中，高亮横幅 + 报名中角标同步生效） -->
+            <a class="btn btn--brand btn--sm" href="https://ch6egz.aliwork.com/o/baoming1123" target="_blank" rel="noopener">立即报名</a>
           </div>
         </article>
       </div>
@@ -4040,7 +3788,7 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
           <article class="guide-card reveal" data-reveal-delay="2">
             <h4><b>熟练用户</b> / 进阶攻关</h4>
             <p>想攻克复杂表格、函数体系、占位符等高阶专题</p>
-            <p class="guide-to">推荐参加<b>大师训练营</b><a class="tag tag--live tag--inline" href="https://ch6egz.aliwork.com/o/baoming1026" target="_blank" rel="noopener">报名中</a></p>
+            <p class="guide-to">推荐参加<b>大师训练营</b><a class="tag tag--live tag--inline" href="https://ch6egz.aliwork.com/o/baoming1123" target="_blank" rel="noopener">报名中</a></p>
           </article>
         </div>
 
@@ -4098,14 +3846,14 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
 
       <!-- 新手营大纲（依据新手营宣发物料整理；每日详细任务待运营补充） -->
       <div class="sched-pane is-active" id="sched-newbie" role="tabpanel" aria-label="新手训练营">
-        <p class="sched-meta">已结营 · 10 月 12 日 – 10 月 16 日 · 每天学习 30–50 分钟 · 免费参加</p>
+        <p class="sched-meta">已结营 · 11 月 9 日 – 11 月 13 日 · 每天学习 30–50 分钟 · 免费参加</p>
         <ol class="tl">
           <li class="tl-item">
             <span class="tl-node">1</span>
             <article class="tl-card">
               <div class="tl-head">
                 <span class="tl-pill">DAY1</span>
-                <span class="tl-date">10 月 12 日 · 周一</span>
+                <span class="tl-date">11 月 9 日 · 周一</span>
               </div>
               <div class="tl-theme">
                 <span class="tl-label">学习主题</span>
@@ -4127,7 +3875,7 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
             <article class="tl-card">
               <div class="tl-head">
                 <span class="tl-pill">DAY2</span>
-                <span class="tl-date">10 月 13 日 · 周二</span>
+                <span class="tl-date">11 月 10 日 · 周二</span>
               </div>
               <div class="tl-theme">
                 <span class="tl-label">学习主题</span>
@@ -4149,7 +3897,7 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
             <article class="tl-card">
               <div class="tl-head">
                 <span class="tl-pill">DAY3</span>
-                <span class="tl-date">10 月 14 日 · 周三</span>
+                <span class="tl-date">11 月 11 日 · 周三</span>
               </div>
               <div class="tl-theme">
                 <span class="tl-label">学习主题</span>
@@ -4171,7 +3919,7 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
             <article class="tl-card">
               <div class="tl-head">
                 <span class="tl-pill">DAY4</span>
-                <span class="tl-date">10 月 15 日 · 周四</span>
+                <span class="tl-date">11 月 12 日 · 周四</span>
               </div>
               <div class="tl-theme">
                 <span class="tl-label">学习主题</span>
@@ -4193,7 +3941,7 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
             <article class="tl-card">
               <div class="tl-head">
                 <span class="tl-pill">DAY5</span>
-                <span class="tl-date">10 月 16 日 · 周五</span>
+                <span class="tl-date">11 月 13 日 · 周五</span>
               </div>
               <div class="tl-theme">
                 <span class="tl-label">学习主题</span>
@@ -4215,14 +3963,14 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
       </div>
 
       <div class="sched-pane" id="sched-aipro" role="tabpanel" aria-label="AIPro 训练营" hidden>
-        <p class="sched-meta">已结营 · 10 月 19 日 – 10 月 23 日 · 每天约 40 分钟 · 免费参加</p>
+        <p class="sched-meta">已结营 · 11 月 16 日 – 11 月 20 日 · 每天约 40 分钟 · 免费参加</p>
         <ol class="tl">
           <li class="tl-item">
             <span class="tl-node">1</span>
             <article class="tl-card">
               <div class="tl-head">
                 <span class="tl-pill">DAY1</span>
-                <span class="tl-date">10 月 19 日 · 周一</span>
+                <span class="tl-date">11 月 16 日 · 周一</span>
               </div>
               <div class="tl-theme">
                 <span class="tl-label">学习主题</span>
@@ -4244,7 +3992,7 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
             <article class="tl-card">
               <div class="tl-head">
                 <span class="tl-pill">DAY2</span>
-                <span class="tl-date">10 月 20 日 · 周二</span>
+                <span class="tl-date">11 月 17 日 · 周二</span>
               </div>
               <div class="tl-theme">
                 <span class="tl-label">学习主题</span>
@@ -4266,7 +4014,7 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
             <article class="tl-card">
               <div class="tl-head">
                 <span class="tl-pill">DAY3</span>
-                <span class="tl-date">10 月 21 日 · 周三</span>
+                <span class="tl-date">11 月 18 日 · 周三</span>
               </div>
               <div class="tl-theme">
                 <span class="tl-label">学习主题</span>
@@ -4288,7 +4036,7 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
             <article class="tl-card">
               <div class="tl-head">
                 <span class="tl-pill">DAY4</span>
-                <span class="tl-date">10 月 22 日 · 周四</span>
+                <span class="tl-date">11 月 19 日 · 周四</span>
               </div>
               <div class="tl-theme">
                 <span class="tl-label">学习主题</span>
@@ -4310,7 +4058,7 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
             <article class="tl-card">
               <div class="tl-head">
                 <span class="tl-pill">DAY5</span>
-                <span class="tl-date">10 月 23 日 · 周五</span>
+                <span class="tl-date">11 月 20 日 · 周五</span>
               </div>
               <div class="tl-theme">
                 <span class="tl-label">学习主题</span>
@@ -4333,14 +4081,14 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
 
       <!-- 大师营大纲（依据大师营宣发物料整理） -->
       <div class="sched-pane" id="sched-master" role="tabpanel" aria-label="大师训练营" hidden>
-        <p class="sched-meta">报名进行中 · 10 月 26 日 – 10 月 30 日 · 每天 1 节课 · 免费参加</p>
+        <p class="sched-meta">报名进行中 · 11 月 23 日 – 11 月 27 日 · 每天 1 节课 · 免费参加</p>
         <ol class="tl">
           <li class="tl-item">
             <span class="tl-node">1</span>
             <article class="tl-card">
               <div class="tl-head">
                 <span class="tl-pill">DAY1</span>
-                <span class="tl-date">10 月 26 日 · 周一</span>
+                <span class="tl-date">11 月 23 日 · 周一</span>
               </div>
               <div class="tl-theme">
                 <span class="tl-label">学习主题</span>
@@ -4362,7 +4110,7 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
             <article class="tl-card">
               <div class="tl-head">
                 <span class="tl-pill">DAY2</span>
-                <span class="tl-date">10 月 27 日 · 周二</span>
+                <span class="tl-date">11 月 24 日 · 周二</span>
               </div>
               <div class="tl-theme">
                 <span class="tl-label">学习主题</span>
@@ -4384,7 +4132,7 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
             <article class="tl-card">
               <div class="tl-head">
                 <span class="tl-pill">DAY3</span>
-                <span class="tl-date">10 月 28 日 · 周三</span>
+                <span class="tl-date">11 月 25 日 · 周三</span>
               </div>
               <div class="tl-theme">
                 <span class="tl-label">学习主题</span>
@@ -4406,7 +4154,7 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
             <article class="tl-card">
               <div class="tl-head">
                 <span class="tl-pill">DAY4</span>
-                <span class="tl-date">10 月 29 日 · 周四</span>
+                <span class="tl-date">11 月 26 日 · 周四</span>
               </div>
               <div class="tl-theme">
                 <span class="tl-label">学习主题</span>
@@ -4428,7 +4176,7 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
             <article class="tl-card">
               <div class="tl-head">
                 <span class="tl-pill">DAY5</span>
-                <span class="tl-date">10 月 30 日 · 周五</span>
+                <span class="tl-date">11 月 27 日 · 周五</span>
               </div>
               <div class="tl-theme">
                 <span class="tl-label">学习主题</span>
@@ -4652,12 +4400,12 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
       <p class="faq-more">更多产品问题，可查阅 <a href="https://help.aliyun.com/zh/quick-bi/" target="_blank" rel="noopener">Quick BI 官方帮助文档</a></p>
     </section>
 
-    <!-- 底部报名条（2026-10-22 按运营要求回移至页尾；顶部转化由锚点导航右侧「立即报名」CTA 承担；2026-10-22 班期轮换后跟随本期报名中的班期：大师营，宜搭表单 baoming1026；班期轮换时同步更新本块文案与链接） -->
+    <!-- 底部报名条（2026-10-22 按运营要求回移至页尾；顶部转化由锚点导航右侧「立即报名」CTA 承担；2026-11-16 班期轮换后跟随本期报名中的班期：大师营，宜搭表单 baoming1123；班期轮换时同步更新本块文案与链接） -->
     <section class="cta-strip reveal" id="join">
       <div class="cta-strip-copy">
         <h2>名额有限，立即报名 <em>大师训练营</em></h2>
-        <p>10 月 26 日开营 · 免费参加 · 报满即止 · 完成学习获官方认证证书</p>
-        <a class="btn btn--white btn--lg" href="https://ch6egz.aliwork.com/o/baoming1026" target="_blank" rel="noopener">立即报名<svg class="icon"><use href="#i-arrow" xlink:href="#i-arrow"/></svg></a>
+        <p>11 月 23 日开营 · 免费参加 · 报满即止 · 完成学习获官方认证证书</p>
+        <a class="btn btn--white btn--lg" href="https://ch6egz.aliwork.com/o/baoming1123" target="_blank" rel="noopener">立即报名<svg class="icon"><use href="#i-arrow" xlink:href="#i-arrow"/></svg></a>
       </div>
       <div class="cta-strip-qr">
         <p>报名咨询 · 班主任</p>
@@ -4666,27 +4414,7 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
     </section>
 
   </main></div></section><div style="height:40px"></div><footer style="margin-top:56px;padding:24px 0 6px;border-top:1px solid hsl(220,13%,90%);display:flex;flex-direction:column;align-items:center;gap:4px"><p style="font-size:13px;color:hsl(220,8%,48%);margin:0;font-weight:500">瓴羊 · Quick BI × AIPro 学习中心</p><p style="font-size:12px;color:hsl(220,8%,64%);margin:0">课程持续更新 · 点击右侧客服进学习群</p></footer></div></div></div>
-<style>html{scroll-behavior:smooth}</style>
-<script>
-(function(){
-  function bind(attrBtn, attrBox){
-    var btns = Array.prototype.slice.call(document.querySelectorAll('[' + attrBtn + ']'));
-    var boxes = Array.prototype.slice.call(document.querySelectorAll('[' + attrBox + ']'));
-    btns.forEach(function(b){
-      b.addEventListener('click', function(){
-        btns.forEach(function(x){ x.className = x.getAttribute('data-off'); x.style.display = 'inline-flex'; x.style.alignItems = 'center'; });
-        b.className = b.getAttribute('data-on'); b.style.display = 'inline-flex'; b.style.alignItems = 'center';
-        var lv = b.getAttribute(attrBtn);
-        boxes.forEach(function(g){
-          g.style.display = (lv === '全部' || g.getAttribute(attrBox) === lv) ? '' : 'none';
-        });
-      });
-    });
-  }
-  bind('data-lvq-btn', 'data-lvq-box');
-  bind('data-lv-btn', 'data-lv-card');
-})();
-</script><style>
+<style>html{scroll-behavior:smooth}</style><style>
 /* 全局字号放大 */
 .text-\[10px\]{font-size:12px !important}
 .text-\[11px\]{font-size:13px !important}
@@ -4873,510 +4601,6 @@ a.lv-act-main:active,button.lv-act-main:active{transform:scale(.98)}
 })();
 </script>
 
-<div id="video-modal" style="display:none;position:fixed;inset:0;z-index:100;background:rgba(15,23,42,.80);backdrop-filter:blur(3px);align-items:center;justify-content:center;padding:24px">
-<div style="width:100%;max-width:880px">
-<div style="display:flex;align-items:center;gap:12px;margin-bottom:10px">
-<p id="video-modal-title" style="color:#fff;font-size:15px;font-weight:600;margin:0;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap"></p>
-<a id="video-open-link" href="#" target="_blank" rel="noopener" style="color:rgba(255,255,255,.75);font-size:12px;text-decoration:none;flex-shrink:0">新窗口打开 ↗</a>
-<button id="video-close" type="button" style="color:#fff;background:rgba(255,255,255,.15);border:none;width:32px;height:32px;border-radius:8px;cursor:pointer;font-size:15px;line-height:1;flex-shrink:0">✕</button>
-</div>
-<video id="video-player" controls playsinline preload="metadata" style="width:100%;aspect-ratio:16/9;background:#000;border-radius:10px;box-shadow:0 24px 60px rgba(0,0,0,.5);display:block"></video>
-<p style="color:rgba(255,255,255,.55);font-size:12px;margin:8px 0 0;text-align:center">视频加载失败时，可点击右上角「新窗口打开」直接播放</p>
-</div>
-</div>
-<script>
-(function(){
-  // ---- 角色不再切换：业务及数据分析师 / 管理员 课程按产品线依次平铺展示 ----
-  (function mergeRoleBlocks(){
-    var view = document.getElementById('courses-view');
-    if(!view) return;
-    var analyst = view.querySelector('[data-role-view="analyst"]');
-    var admin = view.querySelector('[data-role-view="admin"]');
-    if(!analyst || !admin) return;
-    /* 把管理员课程块移动到对应产品线之后：AIPro 用户 → AIPro 管理员，Quick BI 用户 → Quick BI 管理员 */
-    ['aipro','qbi'].forEach(function(line){
-      var a = analyst.querySelector('.line-block[data-line-of="' + line + '"]');
-      var b = admin.querySelector('.line-block[data-line-of="' + line + '"]');
-      if(!a || !b) return;
-      a.setAttribute('data-role', 'analyst');
-      b.setAttribute('data-role', 'admin');
-      a.parentNode.insertBefore(b, a.nextSibling);
-    });
-    if(admin.parentNode) admin.parentNode.removeChild(admin);
-    /* 去掉角色容器，四个课程块直接挂在课程区下 */
-    var parent = analyst.parentNode;
-    if(parent){
-      while(analyst.firstChild) parent.insertBefore(analyst.firstChild, analyst);
-      parent.removeChild(analyst);
-    }
-  })();
-
-  var currentLine = 'aipro';
-  function courseView(){ return document.getElementById('courses-view'); }
-  function refreshLineUI(){
-    document.querySelectorAll('[data-line-goto]').forEach(function(c){
-      c.classList.toggle('is-active', c.getAttribute('data-line-goto') === currentLine);
-    });
-  }
-
-  function scrollToY(y){ window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' }); }
-
-  // ---- 阶段步骤条：切换阶段即直接展示该阶段课程（去掉「开始学习」二次跳转） ----
-  function selectStage(block, stageNum, noScroll){
-    if(!block) return;
-    var steps = block.querySelector('.stage-steps');
-    if(!steps) return;
-    var target = block.querySelector('.stage-view > .acc[data-stage="' + stageNum + '"]');
-    if(!target) return;
-    block.querySelectorAll('.stage-view > .acc').forEach(function(a){
-      a.classList.toggle('is-current', a === target);
-    });
-    steps.querySelectorAll('.stg-step').forEach(function(b){
-      var on = b.getAttribute('data-stage-select') === String(stageNum);
-      b.classList.toggle('is-active', on);
-      b.setAttribute('aria-selected', on ? 'true' : 'false');
-    });
-    if(!noScroll && steps.getBoundingClientRect().top < 60){
-      scrollToY(steps.getBoundingClientRect().top + window.scrollY - 92);
-    }
-    updateRails();
-    updateProgress();
-  }
-  /* 步骤条上的课程数按实际资源数校正（缺链接的占位资源不计入） */
-  function syncStageCounts(){
-    document.querySelectorAll('.line-block').forEach(function(block){
-      var steps = block.querySelector('.stage-steps');
-      if(!steps) return;
-      steps.querySelectorAll('.stg-step').forEach(function(b){
-        var acc = document.getElementById('acc-' + b.getAttribute('data-acc'));
-        if(!acc) return;
-        var n = acc.querySelectorAll('[data-learnkey]').length;
-        var cnt = b.querySelector('.stg-count');
-        if(cnt && n) cnt.textContent = n + ' 课';
-      });
-    });
-  }
-  function gotoLine(line){
-    var blocks = document.querySelectorAll('#courses-view .line-block[data-line-of="' + line + '"]');
-    if(!blocks.length) return;
-    currentLine = line;
-    var y = blocks[0].getBoundingClientRect().top + window.scrollY - 92;
-    scrollToY(y);
-    setTimeout(updateRails, 60);
-    refreshLineUI();
-  }
-  document.addEventListener('click', function(e){
-    var step = e.target.closest ? e.target.closest('.stg-step') : null;
-    if(!step) return;
-    var block = step.closest('.line-block');
-    if(!block) return;
-    selectStage(block, step.getAttribute('data-stage-select'));
-    currentLine = block.getAttribute('data-line-of');
-    refreshLineUI();
-  });
-  document.querySelectorAll('[data-line-goto]').forEach(function(c){
-    c.addEventListener('click', function(){ gotoLine(c.getAttribute('data-line-goto')); });
-  });
-
-  // ---- 滚动时识别当前产品线并点亮产品线标签（按视口重叠面积） ----
-  function detectLine(){
-    var view = courseView();
-    if(!view) return;
-    var vh = window.innerHeight;
-    var best = null, bestArea = 0;
-    Array.prototype.slice.call(view.querySelectorAll('.line-block')).forEach(function(b){
-      var r = b.getBoundingClientRect();
-      var overlap = Math.min(r.bottom, vh) - Math.max(r.top, 0);
-      if(overlap > bestArea){ bestArea = overlap; best = b.getAttribute('data-line-of'); }
-    });
-    if(best) currentLine = best;
-    refreshLineUI();
-  }
-  var scrollTick = false;
-  window.addEventListener('scroll', function(){
-    if(scrollTick) return;
-    scrollTick = true;
-    setTimeout(function(){ scrollTick = false; detectLine(); }, 120);
-  });
-
-  // ---- 横滑条翻页箭头：可滚动时点亮，边界自动隐藏 ----
-  function railRefresh(w){
-    var r = w.querySelector('.rail');
-    var prev = w.querySelector('.rail-prev');
-    var next = w.querySelector('.rail-next');
-    if(!r || !prev || !next) return;
-    var max = r.scrollWidth - r.clientWidth;
-    if(max <= 4){ prev.hidden = true; next.hidden = true; return; }
-    prev.hidden = r.scrollLeft <= 6;
-    next.hidden = r.scrollLeft >= max - 6;
-  }
-  function updateRails(){
-    document.querySelectorAll('.rail-wrap').forEach(railRefresh);
-  }
-  document.querySelectorAll('.rail-wrap').forEach(function(w){
-    var r = w.querySelector('.rail');
-    var prev = w.querySelector('.rail-prev');
-    var next = w.querySelector('.rail-next');
-    if(!r) return;
-    function page(dir){
-      r.scrollBy({ left: dir * Math.max(240, r.clientWidth * 0.85), behavior: 'smooth' });
-    }
-    if(prev) prev.addEventListener('click', function(){ page(-1); });
-    if(next) next.addEventListener('click', function(){ page(1); });
-    r.addEventListener('scroll', function(){
-      if(r.__scrollTimer) window.clearTimeout(r.__scrollTimer);
-      r.__scrollTimer = window.setTimeout(function(){ railRefresh(w); }, 60);
-    });
-  });
-  window.addEventListener('resize', updateRails);
-  window.__updateRails = updateRails;
-
-  // ---- 学习进度 ----
-  var LSKEY = 'qax-learn-progress';
-  function getSeen(){ try { return JSON.parse(localStorage.getItem(LSKEY) || '[]'); } catch(e){ return []; } }
-  function markSeen(k){
-    var s = getSeen();
-    if(s.indexOf(k) < 0){
-      s.push(k);
-      try { localStorage.setItem(LSKEY, JSON.stringify(s)); } catch(e){}
-      updateProgress();
-    }
-  }
-  window.__markSeen = markSeen;
-  function updateProgress(){
-    var seen = getSeen();
-    document.querySelectorAll('[data-learnkey]').forEach(function(el){
-      el.classList.toggle('watched', seen.indexOf(el.getAttribute('data-learnkey')) >= 0);
-    });
-    document.querySelectorAll('.acc, .stage-card').forEach(function(acc){
-      var keys = [];
-      acc.querySelectorAll('[data-learnkey]').forEach(function(el){ keys.push(el.getAttribute('data-learnkey')); });
-      var total = parseInt(acc.getAttribute('data-total') || '0', 10) || keys.length;
-      var label = acc.querySelector('.acc-prog-label');
-      var bar = acc.querySelector('.acc-prog-bar i');
-      var prog = acc.querySelector('.acc-prog');
-      var done = keys.filter(function(k){ return seen.indexOf(k) >= 0; }).length;
-      if(label && prog){
-        prog.style.display = total ? '' : 'none';
-        label.innerHTML = '已学 <b>' + done + '</b>/' + total;
-        if(bar) bar.style.width = Math.round(100 * done / (total || 1)) + '%';
-      }
-      var block = acc.closest ? acc.closest('.line-block') : null;
-      var step = block ? block.querySelector('.stg-step[data-acc="' + acc.id.replace('acc-', '') + '"]') : null;
-      if(step){
-        var stg = step.querySelector('.stg-prog');
-        if(stg) stg.textContent = '已学 ' + done + '/' + total;
-        step.classList.toggle('started', done > 0);
-      }
-    });
-  }
-  document.addEventListener('click', function(e){
-    var v = e.target.closest ? e.target.closest('[data-video]') : null;
-    if(v){ markSeen(v.getAttribute('data-video')); return; }
-    var l = e.target.closest ? e.target.closest('a[data-learn]') : null;
-    if(l){ markSeen(l.getAttribute('data-learn')); }
-  });
-
-  /* 阶段标题行仅作说明，不再承担展开/收起交互 */
-  document.querySelectorAll('.stage-view .acc-head').forEach(function(h){
-    h.setAttribute('tabindex', '-1');
-    h.removeAttribute('aria-expanded');
-  });
-  syncStageCounts();
-  updateProgress();
-  updateRails();
-  detectLine();
-  refreshLineUI();
-})();
-
-// ---- v7: 精选直播目录（产品发布 / 行业实践）悬浮高亮 ----
-(function(){
-  var section = document.querySelector('[data-portal-view="live"]');
-  if(!section) return;
-  var btns = Array.prototype.slice.call(section.querySelectorAll('[data-live-goto]'));
-  if(!btns.length) return;
-  function dataId(b){ return b.getAttribute('data-live-goto'); }
-  function setActive(id){
-    btns.forEach(function(b){ b.classList.toggle('is-active', dataId(b) === id); });
-  }
-  btns.forEach(function(b){
-    b.addEventListener('click', function(){
-      var id = dataId(b);
-      var el = document.getElementById(id);
-      if(!el) return;
-      setActive(id);
-      var y = el.getBoundingClientRect().top + window.scrollY - 100;
-      window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
-    });
-  });
-  function spy(){
-    if(section.style.display === 'none') return;
-    var current = dataId(btns[0]);
-    btns.forEach(function(b){
-      var el = document.getElementById(dataId(b));
-      if(el && el.getBoundingClientRect().top <= 100) current = dataId(b);
-    });
-    setActive(current);
-  }
-  var tick = false;
-  window.addEventListener('scroll', function(){
-    if(tick) return;
-    tick = true;
-    setTimeout(function(){ tick = false; spy(); }, 120);
-  });
-  window.addEventListener('resize', function(){ setTimeout(spy, 90); });
-})();
-
-// ---- v5: 系列课程 / 精选直播 / 训练营 三分块切换 + URL 深链 ----
-// Cloudflare Pages 线上使用 /courses、/live、/camp；本地预览及旧链接兼容 #courses、#live、#camp
-(function(){
-  var cards = Array.prototype.slice.call(document.querySelectorAll('[data-portal-goto]'));
-  var views = Array.prototype.slice.call(document.querySelectorAll('[data-portal-view]'));
-  var PORTALS = { courses: 1, live: 1, camp: 1 };
-  /* 训练营页内锚点：直接打开这些链接时也先切到训练营 */
-  var CAMP_HASHES = { camps: 1, schedule: 1, tutors: 1, rewards: 1, faq: 1, join: 1 };
-  var DEFAULT_PORTAL = 'courses';
-
-  function applyPortal(name){
-    cards.forEach(function(c){ c.classList.toggle('active', c.getAttribute('data-portal-goto') === name); });
-    views.forEach(function(v){ v.style.display = (v.getAttribute('data-portal-view') === name) ? '' : 'none'; });
-    setTimeout(function(){
-      if(window.__updateRails) window.__updateRails();
-      window.dispatchEvent(new Event('resize'));
-    }, 90);
-  }
-
-  function readHashPortal(){
-    var name = (location.hash || '').replace(/^#\/?/, '');
-    if (PORTALS[name]) return name;
-    if (CAMP_HASHES[name]) return 'camp';
-    return '';
-  }
-
-  function readPathPortal(){
-    var m = (location.pathname || '').match(/\/(courses|live|camp)\/?$/);
-    return m ? m[1] : '';
-  }
-
-  function portalPath(name){
-    var path = location.pathname || '/';
-    var m = path.match(/^(.*\/)(?:courses|live|camp)\/?$/);
-    if (m) return m[1] + name;
-    if (/\/index\.html$/.test(path)) return path.replace(/index\.html$/, '') + name;
-    if (/\/$/.test(path)) return path + name;
-    return path.replace(/[^/]*$/, '') + name;
-  }
-
-  function setPortal(name, syncUrl){
-    if (!PORTALS[name]) name = DEFAULT_PORTAL;
-    applyPortal(name);
-    if (syncUrl === false) return;
-
-    /* v10：统一 path 路由（/courses、/live、/camp），依赖根目录 _redirects 把模块路径以 200
-       回落到根入口；file:// 本地预览无法做路径回落，退回 hash 保证可用 */
-    if (location.protocol === 'file:') {
-      var nextHash = '#' + name;
-      if (location.hash !== nextHash) {
-        var nextUrl = location.href.split('#')[0] + nextHash;
-        try { history.pushState(null, '', nextUrl); }
-        catch (err) { location.hash = name; }
-      }
-      return;
-    }
-
-    var nextPath = portalPath(name);
-    /* 保留 ?v=... 等查询参数，同时清掉旧 hash */
-    if (location.pathname !== nextPath || location.hash) {
-      try { history.pushState(null, '', nextPath + (location.search || '')); }
-      catch (err) { location.href = nextPath + (location.search || ''); }
-    }
-  }
-
-  function syncFromUrl(){
-    /* 路径优先，兼容旧的 hash 链接 */
-    var name = readPathPortal() || readHashPortal();
-    if (name) {
-      applyPortal(name);
-    } else if (!location.hash || location.hash === '#') {
-      /* 根路径 / index.html 默认显示「系列课程」 */
-      applyPortal(DEFAULT_PORTAL);
-    }
-  }
-
-  cards.forEach(function(c){
-    c.addEventListener('click', function(){ setPortal(c.getAttribute('data-portal-goto')); });
-  });
-
-  window.addEventListener('hashchange', syncFromUrl);
-  window.addEventListener('popstate', syncFromUrl);
-  syncFromUrl();
-
-  window.__setPortal = function(name){ setPortal(name); };
-})();
-</script>
-<script>
-(function(){
-  var modal = document.getElementById('video-modal');
-  var player = document.getElementById('video-player');
-  var titleEl = document.getElementById('video-modal-title');
-  var openLink = document.getElementById('video-open-link');
-  var closeBtn = document.getElementById('video-close');
-  function open(url, t, poster){
-    player.setAttribute('src', url);
-    if (poster) player.setAttribute('poster', poster); else player.removeAttribute('poster');
-    titleEl.textContent = t || '';
-    openLink.setAttribute('href', url);
-    modal.style.display = 'flex';
-    try { var p = player.play(); if (p && p.catch) p.catch(function(){}); } catch(e){}
-  }
-  window.__openVideo = open;
-  function close(){
-    try { player.pause(); } catch(e){}
-    player.removeAttribute('src'); player.load();
-    modal.style.display = 'none';
-  }
-  document.addEventListener('click', function(e){
-    var t = e.target;
-    while (t && t !== document.body) {
-      if (t.hasAttribute && t.hasAttribute('data-video')) {
-        e.preventDefault();
-        open(t.getAttribute('data-video'), t.getAttribute('data-video-title') || '', t.getAttribute('data-video-poster') || '');
-        return;
-      }
-      t = t.parentNode;
-    }
-  });
-  modal.addEventListener('click', function(e){ if (e.target === modal) close(); });
-  closeBtn.addEventListener('click', close);
-  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') close(); });
-})();
-</script>
-<script>
-/* AIPro 课程条目：标题后追加「实操演示（播放）/ 图文详情（文档）」两个图标按钮
- * 1) 按钮只显示图标，文案在悬浮/聚焦时以气泡提示，不占行宽
- * 2) 点击标题区域（非按钮）默认播放视频；视频地址未配置时保持原有文档跳转
- * 3) 视频地址后续按「课程标题」补进 VIDEO_SRC，值为 mp4 直链 */
-(function(){
-  /* 视频地址：键 = 课程标题（.sc-course-main 文本），值 = mp4 直链 */
-  var VIDEO_SRC = {
-    /* —— 业务用户篇 —— */
-    'AIPro是什么': 'https://cloud.video.taobao.com/vod/NKZPqFLNbWNsAEfyPWb99Zma6Y8nOiqLDY0UDO_n9CE.mp4',
-    '3 分钟，为AIPro接入数据': 'https://cloud.video.taobao.com/vod/U5iA9ohXtAO-2k9ReidlloiNXmDblU5EfpOe-UQkK9M.mp4',
-    '不会SQL，自然语言实现问数分析': 'https://cloud.video.taobao.com/vod/ivNxTOkWacwTyktlzIFrp7hfQ1rkVPOxapE_ub-4ojw.mp4',
-    '会前 5 分钟，AI 搭出会更新的看板': 'https://cloud.video.taobao.com/vod/D1PYWFEW390TyJu3bMreTEylSee2CMo3oGQrLnCLK6c.mp4',
-    '汇报不用熬夜：AI 把分析写成文档报告': 'https://cloud.video.taobao.com/vod/LBRPZd-rTRi7BwyVY90c-15XYRA6jQH-R9-0kvdif_c.mp4',
-    '分析一键变网页：生成 HTML 报告': 'https://cloud.video.taobao.com/vod/BoQH0jwhSlI64qmiwLT7DCAJXHMdrNUt_awsTVhfq4A.mp4',
-    '将分析过程变成可复用的skill': 'https://cloud.video.taobao.com/vod/lbFemq5xm392AHmR9L-XMIlASkMXSlR_HkVBqwiAxrA.mp4',
-    '每天 9 点自动生成日报并推送': 'https://cloud.video.taobao.com/vod/jRQeaE3FTgmF69ihBebdgkDkgyfUMjaLYLrzibEJG34.mp4',
-    /* —— 管理员篇 —— */
-    '给公司成员开通产品使用权限': 'https://cloud.video.taobao.com/vod/rNQ5G5okwTO1-70_LWGYMmZnGEzGMB8U67mseTcCkBA.mp4',
-    '把企业数据资产接进 AI': 'https://cloud.video.taobao.com/vod/VsaTtwRRVVyt3blP343ZILhHLh7Ac6LfQlM2dpuO7qM.mp4',
-    '员工上手就有数可用': 'https://cloud.video.taobao.com/vod/nHAjCyvF20X9Hxo5OJKvyEI7qNZNkU5pCeWQuP7mgCY.mp4',
-    '把企业口径讲给 AI 听': 'https://cloud.video.taobao.com/vod/OZSdN03X-BBLVF3oKVhglVROEF1Ki3TzrhhFUTIjdXo.mp4',
-    '把标准分析思路沉淀下来': 'https://cloud.video.taobao.com/vod/PoPRZfjXp0ARkr8VSgYXHBNB_gOY9HUvkERqgvlM4AE.mp4',
-    '让 AI 用上外部工具和数据': 'https://cloud.video.taobao.com/vod/DLAnC_SZAw2DQpCclJegXuAM96Zo83-HeBbgGaLMhJY.mp4',
-    '让员工在企业 IM 中直接与 AIPro 对话': 'https://cloud.video.taobao.com/vod/5si99nCwo7jIJZ4yMXXZ2taQ4gewIkSm4-dqyP5-N30.mp4',
-    '用户使用和回答情况一目了然': 'https://cloud.video.taobao.com/vod/hPlNls5IKXHMiH64yMV_VsYmoSa2kcVyfl1ckb5IYXk.mp4',
-    'AI 用量看得见、花得省': 'https://cloud.video.taobao.com/vod/9KVZI8FTi4x8PAbe48EWlo-ZILnv0yNlaijTlZqkC8w.mp4'
-  };
-  /* 标题里空格写法不完全一致时也能命中：去掉空白后再匹配 */
-  function normTitle(s){ return String(s || '').replace(/\s+/g, ''); }
-  var VIDEO_SRC_NORM = {};
-  Object.keys(VIDEO_SRC).forEach(function(k){ VIDEO_SRC_NORM[normTitle(k)] = VIDEO_SRC[k]; });
-  var ICON_PLAY = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg>';
-  var ICON_DOC = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v5h5"></path><path d="M8 13h8"></path><path d="M8 17h5"></path></svg>';
-
-  function playVideo(url, title, key){
-    if (window.__openVideo) window.__openVideo(url, title, '');
-    else window.open(url, '_blank', 'noopener');
-    if (window.__markSeen && key) window.__markSeen(key);
-  }
-  /* 视频未配置时用气泡提示代替跳转，避免点到无反应 */
-  function flash(el, text){
-    var origin = el.getAttribute('data-tip') || '';
-    el.setAttribute('data-tip', text);
-    el.classList.add('is-hint');
-    window.setTimeout(function(){
-      el.classList.remove('is-hint');
-      el.setAttribute('data-tip', origin);
-    }, 1600);
-  }
-  function makeAct(mod, tip, icon, onFire){
-    var el = document.createElement('span');
-    el.className = 'sc-act ' + mod;
-    el.setAttribute('role', 'button');
-    el.setAttribute('tabindex', '0');
-    el.setAttribute('aria-label', tip);
-    el.setAttribute('data-tip', tip);
-    el.innerHTML = icon;
-    el.addEventListener('click', function(e){
-      e.preventDefault();
-      e.stopPropagation();
-      onFire(el);
-    });
-    el.addEventListener('keydown', function(e){
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); e.stopPropagation(); onFire(el); }
-    });
-    return el;
-  }
-
-  document.querySelectorAll('.stage-card[data-line="aipro"] a.sc-course:not(.is-pending)').forEach(function(a){
-    if (a.querySelector('.sc-acts')) return;
-    var titleEl = a.querySelector('.sc-course-main');
-    var title = titleEl ? titleEl.textContent.trim() : '';
-    var key = a.getAttribute('data-learnkey') || '';
-    var docUrl = a.getAttribute('data-learn') || a.getAttribute('href') || '';
-    var videoUrl = a.getAttribute('data-video') || VIDEO_SRC[title] || VIDEO_SRC_NORM[normTitle(title)] || '';
-
-    var acts = document.createElement('span');
-    acts.className = 'sc-acts';
-    acts.appendChild(makeAct('sc-act--video', '实操演示', ICON_PLAY, function(el){
-      if (!videoUrl) { flash(el, '视频待补充'); return; }
-      playVideo(videoUrl, title, key);
-    }));
-    acts.appendChild(makeAct('sc-act--doc', '图文详情', ICON_DOC, function(){
-      if (docUrl) window.open(docUrl, '_blank', 'noopener');
-      if (window.__markSeen && key) window.__markSeen(key);
-    }));
-    a.appendChild(acts);
-
-    /* 标题区域点击：有视频则站内播放，未配置则保持原有链接行为 */
-    a.addEventListener('click', function(e){
-      if (!videoUrl) return;
-      if (e.metaKey || e.ctrlKey || e.shiftKey || (e.button !== undefined && e.button !== 0)) return;
-      e.preventDefault();
-      playVideo(videoUrl, title, key);
-    });
-  });
-})();
-</script><script>
-(function(){
-  // 点击视频首图 = 点击该卡片的「观看视频 / 观看回放」按钮
-  document.addEventListener('click', function(e){
-    var media = e.target.closest ? e.target.closest('.relative.w-full.overflow-hidden') : null;
-    if(!media) return;
-    if(e.target.closest('a, button')) return;          // 图内已有交互元素时不拦截
-    var card = media.closest('[data-learnkey]');
-    if(!card) return;
-    var v = card.querySelector('[data-video]');
-    if(v){ e.preventDefault(); v.click(); return; }
-    var l = card.querySelector('a[data-learn]');
-    if(l){ e.preventDefault(); l.click(); }
-  });
-  // 点击精选直播卡片首图 = 点击该卡片的「观看回放」按钮（交互与课程卡片一致）
-  document.addEventListener('click', function(e){
-    var thumb = e.target.closest ? e.target.closest('.lv-thumb') : null;
-    if(!thumb) return;
-    if(e.target.closest('a, button')) return;          // 图内已有交互元素时不拦截
-    var card = thumb.closest('.lv-card');
-    if(!card) return;
-    var v = card.querySelector('[data-video]');
-    if(v){ e.preventDefault(); v.click(); return; }
-    var l = card.querySelector('a.lv-state');
-    if(l){ e.preventDefault(); l.click(); }
-  });
-})();
-</script>
 <script>
 /* ============================================================
  * Quick BI 领航学堂 · 训练营汇总页交互
